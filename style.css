@@ -8,7 +8,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 100px;
 }
 
 nav ul li a {
@@ -19,3 +19,22 @@ nav ul li a {
 .maipe-zi {
     float: right;
   }
+
+  /*共通部分のロゴを小さくする*/
+  .logo {
+    width: 80px;
+    height: auto;
+    }
+
+    .icon {
+        width: 78px;
+        height: auto;
+    }
+
+    .waku{
+        background-color: #ccc;
+        width: 1340px;
+        height: 600px;
+        text-align: left;
+      }
+      
