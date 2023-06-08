@@ -1,0 +1,62 @@
+*{box-sizing: border-box;}
+
+/* ナビゲーション */
+ul {
+    list-style-type: none;
+    background: #555;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    display: block;
+    padding: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+
+ul a::first-line{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ul li:hover{
+    background: #FF7F50;
+}
+
+/*マイページに遷移する人のアイコンを右寄せ*/
+.mypage {
+    float: right;
+}
+
+/*共通部分のロゴを小さくする*/
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.icon {
+    width: 78px;
+    height: auto;
+}
+
+.frame-gray {
+    background-color: #ccc;
+    width: 1340px;
+    height: 600px;
+    text-align: left;
+    margin-left: auto;
+    height: 500px;
+    width: 1218px;
+  }
+
+.frame-white {
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    height:500px;
+    width:800px;
+}
