@@ -8,7 +8,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 100px;
+    margin-right: 90px;
 }
 
 nav ul li a {
@@ -30,11 +30,23 @@ nav ul li a {
         width: 78px;
         height: auto;
     }
-
-    .frame {
+/*フレーム灰色*/
+     .frame-gray {
         background-color: #ccc;
-        width: 1340px;
-        height: 600px;
-        text-align: left;
+        margin-left: auto;
+        height: 500px;
+        width: 1218px;
       }
+/*フレーム白*/
+     .frame-White {
+        background-color: #FFFFFF;
+        margin: 0 auto;
+        height:500px;
+        width:800px;
+    }
+
+
+
+
+
       
