@@ -16,7 +16,7 @@ nav ul li a {
     text-decoration: none;
 }
 /*マイページに遷移する人のアイコンを右寄せ*/
-.maipe-zi {
+.mypage {
     float: right;
   }
 
@@ -31,7 +31,7 @@ nav ul li a {
         height: auto;
     }
 
-    .waku{
+    .frame {
         background-color: #ccc;
         width: 1340px;
         height: 600px;
