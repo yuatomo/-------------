@@ -3,17 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>基本情報技術者試験×クイズ</title>
-        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="../css/navigation.css">
+        <link rel="stylesheet" href="css/index.css">
         <script src="js/navigation.js"></script>
     </head>
     <body>
         <header>
             <h2>
-                <a href="index.html">
+                <a href="../index.html">
                     <img class="logo" src="image/logo.png" alt="ロゴ">
                 </a>
-                <a href="index.html">基本情報技術者試験×クイズ</a>
-                <a class="mypage" href="mypage/index.html">
+                <a href="../index.html">基本情報技術者試験×クイズ</a>
+                <a class="mypage" href="../mypage/index.html">
                     <img class="icon" src="image/mypage.png" alt="マイページアイコン">
                 </a>
             </h2>
@@ -28,7 +29,23 @@
             </ul>
         </nav>
         <div class="frame-gray">
-            <div class="frame-white"></div>
+            <div class="frame-white">
+                <h1>アカウントログイン</h1>
+                <p class="green"></p><br>
+                <div class="container">
+                    <form action="login.php" method="POST">
+                        <div class="form-group">
+                            <label for="username"><img src="../image/mypage.png" class="icon">ユーザー名:</label>
+                            <input type="text" id="username" name="username" >
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><img src="../image/lock_nankinjou.png" class="icon">パスワード:</label>
+                            <input type="password" id="password" name="password" >
+                        </div>
+                        <input type="submit" value="ログイン">
+                    </form>
+                </div>
+            </div>
         </div>
     </body>
 </html>
