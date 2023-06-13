@@ -42,7 +42,7 @@ h1 {
     margin: 0 auto; /* 中央に配置するためのマージン */
     
 }
-/*ログイン*/
+/*パスワード変更*/
 .container {
     width: 300px;
     margin: 0 auto;
@@ -92,28 +92,6 @@ h1 {
 }
 
 
-/*アカウント管理*/
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.text-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.text {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-}
 
 /*成績ページ*/
 .Grade {
