@@ -1,7 +1,33 @@
-.frame-white.h1{
-    font-size: 40rem;
+h1{
+    font-size: 4rem;
+    border-bottom:3px solid #09cf30;
+    text-align: center;
+    width: 53%;
+    margin: 25px auto;
 }
 
-.frame-white{
-    text-align: center;
+.Button {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 360px;
+	margin: auto;
+	padding: 2rem 8rem;
+	font-weight: bold;
+	border: 2px solid grey;
+	color: black;
+	transition: 0.5s;
+}
+.Button:hover {
+	color: #fff;
+	background: #27acd9;
+}
+
+.line{
+    position: relative;
+    width: 55%;
+    height: 3px;
+    background-color: #808080;
+    margin: 0 auto;
 }

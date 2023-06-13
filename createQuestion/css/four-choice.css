@@ -1,0 +1,38 @@
+h1{
+    font-size: 4rem;
+    border-bottom:3px solid #09cf30;
+    text-align: center;
+    width: 53%;
+    margin: 25px auto;
+}  
+
+.question{
+    text-align: center;
+    font-size: 2rem;
+    background-color: gray;
+    width: 60%;
+    height: 5rem; 
+    margin: auto;
+}
+.choiceQuestion{
+    width: 60%;
+    margin: auto;
+}
+.choice{
+    text-align: center;
+    background-color: gray;
+    width: 5%;
+    height: 2rem; 
+    margin-right: auto;
+    position: relative;
+    top: 1rem;
+}
+.answer{
+    text-align: center;
+    background-color: gray;
+    width: 90%;
+    height: 2rem; 
+    margin-left: auto;
+    position: relative;
+    top: -1rem;
+}
