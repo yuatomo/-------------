@@ -3,32 +3,49 @@
     <head>
         <meta charset="UTF-8">
         <title>基本情報技術者試験×クイズ</title>
-        <link rel="stylesheet" href="css/navigation.css">
-        <script src="js/navigation.js"></script>
+        <link rel="stylesheet" href="../css/navigation.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="../js/navigation.js"></script>
     </head>
     <body>
         <header>
             <h2>
-                <a href="index.html">
-                    <img class="logo" src="image/logo.png" alt="ロゴ">
+                <a href="../index.html">
+                    <img class="logo" src="../image/logo.png" alt="ロゴ">
                 </a>
-                <a href="index.html">基本情報技術者試験×クイズ</a>
-                <a class="mypage" href="mypage/index.html">
-                    <img class="icon" src="image/mypage.png" alt="マイページアイコン">
+                <a href="../index.html">基本情報技術者試験×クイズ</a>
+                <a class="mypage" href="../mypage/index.html">
+                    <img class="icon" src="../image/mypage.png" alt="マイページアイコン">
                 </a>
             </h2>
         </header>
         <nav>
             <ul>
-                <li><a href="createQuestion/index.html">作問</a></li>
-                <li><a href="solveQuestion/index.html">問題</a></li>
-                <li><a href="createAccount/index.html">新規登録</a></li>
-                <li><a href="loginAccount/index.html">ログイン</a></li>
-                <li><a href="mypage/setting.html">設定</a></li>
+                <li><a href="../createQuestion/index.html">作問</a></li>
+                <li><a href="../solveQuestion/index.html">問題</a></li>
+                <li><a href="../createAccount/index.html">新規登録</a></li>
+                <li><a href="../loginAccount/index.html">ログイン</a></li>
+                <li><a href="../mypage/setting.html">設定</a></li>
             </ul>
         </nav>
         <div class="frame-gray">
-            <div class="frame-white"></div>
+            <div class="frame-white">
+                <h1>アカウントログイン</h1>
+                <p class="green"></p><br>
+                <div class="container">
+                    <form action="login.php" method="POST">
+                        <div class="form-group">
+                            <label for="username"><img src="../image/mypage.png" class="icon">ユーザー名:</label>
+                            <input type="text" id="username" name="username" >
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><img src="../image/lock_nankinjou.png" class="icon">パスワード:</label>
+                            <input type="password" id="password" name="password" >
+                        </div>
+                        <input type="submit" value="ログイン">
+                    </form>
+                </div>
+            </div>
         </div>
     </body>
 </html>

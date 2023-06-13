@@ -412,20 +412,69 @@ th {
   font-weight: bold;
 }
 *{box-sizing: border-box;}
-header{
-    background-color: white;
-}
+
+
 body{
     background-color: gainsboro;
+    margin: 0;
 }
 
 
 
+
+/* ヘッダー*/
 header{
+    background-color: white;
     display: block;
     margin: 0;
     height: 10vh;
 }
+
+h2{
+    display: flex;
+    margin: 0 15%;
+    align-items: center;
+    height: 100%;
+}
+
+.logo .icon{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*共通部分のロゴを小さくする*/
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.icon {
+    width: 78px;
+    height: auto;
+}
+
+h2  a{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+}
+
+
+h2 a:nth-of-type(2){
+    margin: 0 0 0 10px;
+}
+h2 a:last-child{
+    margin-right: 0;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+
+
+
+/* ナビゲーション */
 
 nav{
     display: block;
@@ -433,10 +482,10 @@ nav{
     height: 5vh;
     padding: 0;
 }
-/* ナビゲーション */
+
 ul {
     display: flex;
-    box-sizing: border-box;
+    box-sizing: border-box;padding: 0;
     margin: 0 15%;
     height: 100%;
     justify-content: space-between;
@@ -446,15 +495,17 @@ ul {
 }
 
 ul li {
-    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    text-align: center;
 }
 
 ul li a {
+    display: flex;
     color: #fff;
     text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     
 }
 
@@ -468,27 +519,11 @@ ul li:hover{
 }
 
 
-/*マイページに遷移する人のアイコンを右寄せ*/
-.mypage {
-    float: right;
-}
 
 
-/*共通部分のロゴを小さくする*/
-.logo {
-    width: 80px;
-    height: auto;
-}
-
-.icon {
-    width: 78px;
-    height: auto;
-}
-
-
+/*メイン*/
 .frame-white {
     background-color: #FFFFFF;
-    margin: 0 auto;
+    margin: 0 15%;
     height: 85vh;
-    width:1000px;
 }
