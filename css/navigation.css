@@ -422,30 +422,40 @@ body{
 
 
 header{
+    display: block;
     margin: 0;
     height: 10vh;
 }
 
 nav{
+    display: block;
+    background: #555;
     height: 5vh;
+    padding: 0;
 }
 /* ナビゲーション */
 ul {
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 15%;
+    height: 100%;
+    justify-content: space-between;
     list-style-type: none;
-    background: #555;
-    padding: 0;
-    text-align: center;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 ul li {
-    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 ul li a {
-    display: block;
-    padding: 1em;
     color: #fff;
     text-decoration: none;
+    
 }
 
 ul a::first-line{
