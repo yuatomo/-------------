@@ -5,3 +5,40 @@ h1{
     width: 53%;
     margin: 25px auto;
 }
+
+
+
+.question {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 320px;
+	margin: auto;
+	padding: 10px 80px;
+	font-weight: bold;
+	border: 2px solid #808080;
+	color: #000000;
+	transition: 0.5s;
+    font-size: 20px;
+}
+/*ボタンにカーソルを合わせたときの処理*/
+.question:hover {
+    color:#fff;
+    background: #27acd9;
+}
+
+.Garbagecan{
+    margin-left: 800px;
+    text-align: center;
+    width: 30px;
+    
+}
+
+.pencil{
+    margin-left: 750px;
+    text-align: center;
+    width: 30px;
+    
+}
+
