@@ -485,7 +485,8 @@ nav{
 
 ul {
     display: flex;
-    box-sizing: border-box;padding: 0;
+    box-sizing: border-box;
+    padding: 0;
     margin: 0 15%;
     height: 100%;
     justify-content: space-between;
@@ -526,4 +527,5 @@ ul li:hover{
     background-color: #FFFFFF;
     margin: 0 15%;
     height: 85vh;
+    padding: 5vh 10vw;
 }

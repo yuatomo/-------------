@@ -1,19 +1,35 @@
+/* タイトル */
 h1{
-    font-size: 4rem;
+	box-sizing: border-box;
+	margin: 0 auto;
+    font-size: 20px;
     border-bottom:3px solid #09cf30;
     text-align: center;
-    width: 53%;
-    margin: 25px auto;
+    width: 70%;
+	padding: 1vh 0;
 }
 
+
+/* メイン */
+
+.container {
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	padding: 5% 0;
+	margin: 0 auto;
+  }
+/* ボタン */
 .Button {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+
+    justify-content: center;
 	text-decoration: none;
-	width: 360px;
-	margin: auto;
-	padding: 2rem 8rem;
+	height: 7%;
+	width: 100%;
+	margin: 0 auto 3% auto;
 	font-weight: bold;
 	border: 2px solid grey;
 	color: black;
@@ -24,10 +40,12 @@ h1{
 	background: #27acd9;
 }
 
+/* ライン */
 .line{
+	box-sizing: border-box;
     position: relative;
     width: 55%;
     height: 3px;
     background-color: #808080;
-    margin: 0 auto;
+    margin: 5% auto 5% auto;
 }
