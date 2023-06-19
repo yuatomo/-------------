@@ -56,4 +56,8 @@ h1{
   }
   ::placeholder{
     color: black;
+    text-align: center;
+    position: relative;
+    left: 0%;
+    line-height: 200%;
 }
