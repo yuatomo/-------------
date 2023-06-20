@@ -1,40 +1,42 @@
-/*各ボタン*/
-.mypagebutton {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-	width: 320px;
-	margin: auto;
-	padding: 10px 80px;
-	font-weight: bold;
-	border: 2px solid #808080;
-	color: #000000;
-	transition: 0.5s;
+h1{
+    box-sizing: border-box;
+    margin: 0 auto;
     font-size: 20px;
-}
-/*ボタンにカーソルを合わせたときの処理*/
-.mypagebutton:hover {
-    color:#fff;
-    background: #27acd9;
-}
-
-h1 {
-    font-size: 20px;
+    border-bottom:3px solid #09cf30;
     text-align: center;
-    bottom: -10px;
-}
-
-.green{
-    position: relative;
-    width: 55%; /* 線の長さを調節する部分 */
-    height: 3px;
-    background-color: #008000; /* 緑色の線 */
-    margin: 0 auto; /* 中央に配置するためのマージン */
-    
+    width: 70%;
+    padding: 1vh 0;
 }
 
 
 
+/* メイン */
+
+.container {
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	padding: 5% 0;
+	margin: 0 auto;
+  }
 
 
+/* ボタン */
+.Button {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	text-decoration: none;
+	height: 7%;
+	width: 100%;
+	margin: 0 auto 3% auto;
+	font-weight: bold;
+	border: 2px solid grey;
+	color: black;
+	transition: 0.5s;
+}
+.Button:hover {
+	color: #fff;
+	background: #27acd9;
+}
