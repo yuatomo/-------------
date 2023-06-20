@@ -4,6 +4,9 @@ h1{
     text-align: center;
     width: 53%;
     margin: 25px auto;
+    position: relative;
+    top:-30px;
+
 }
 ::placeholder{
     color: black;
@@ -30,7 +33,7 @@ h1{
   transition: .4s;
   position: absolute;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -70px;
 }
 
 .create:hover {
@@ -51,6 +54,8 @@ h1{
 	color: #000000;
 	transition: 0.5s;
     font-size: 20px;
+    position: relative;
+    top:-100px;
 }
 /*回答ボタン*/
 
@@ -64,6 +69,7 @@ h1{
     border-radius: 3px;
     position: relative;
     left: 150px;
+    top:-110px;
   }
   .answer:active {
     /*ボタンを押したとき*/
@@ -84,6 +90,7 @@ h1{
     border-radius: 3px;
     position: relative;
     left: 500px;
+    top:-120px;
   }
   .skip:active {
     /*ボタンを押したとき*/
@@ -106,6 +113,9 @@ h1{
 	color: #000000;
 	transition: 0.5s;
     font-size: 20px;
+    position: relative;
+    top:-80px;
+    
 }
 
 /*中断するボタン*/
@@ -118,11 +128,17 @@ h1{
     border-bottom: solid 4px #627295;
     border-radius: 3px;
     position: relative;
-    left: 100px;
+    left: 80px;
+    top:-40px;
   }
   .interruption:active {
     /*ボタンを押したとき*/
     -webkit-transform: translateY(4px);
     transform: translateY(4px);/*下に動く*/
     border-bottom: none;/*線を消す*/
+  }
+/*回答分を上にあげる処理*/
+  .Answersentence{
+    position: relative;
+    top:-110px;
   }
