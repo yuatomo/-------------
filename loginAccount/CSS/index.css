@@ -47,6 +47,7 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="password"] {
+  box-sizing: border-box;
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -54,10 +55,10 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  display: block;
+  
   box-sizing: border-box;
-  width: 70%;
-  margin: 10px auto;
+  width: 100%;
+  margin: 3vh auto;
   padding: 3px;
   background-color: #4caf50;
   border: none;
