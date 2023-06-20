@@ -5,6 +5,11 @@ h1{
     width: 53%;
     margin:  auto;
 } 
+.now{
+    background-color: gray;
+    text-align: center;
+    background-size: 70% 2rem;
+}
 .question{
     text-align: center;
     position: relative;
@@ -31,6 +36,7 @@ h1{
     text-align: center;
     position: relative;
     left: 0%;
+    bottom: 1rem;
     line-height: 200%;
 }
 
@@ -41,13 +47,13 @@ h1{
     background: #668ad8;/*ボタン色*/
     color: #FFF;
     border-bottom: solid 4px #627295;
-    border-radius: 3px;
+    border-radius: 30%;
     position: relative;
     left: 35rem;;
   }
   .skip:active {
     /*ボタンを押したとき*/
     -webkit-transform: translateY(4px);
-    transform: translateY(4px);/*下に動く*/
+    transform: translateY(1%);/*下に動く*/
     border-bottom: none;/*線を消す*/
   }
