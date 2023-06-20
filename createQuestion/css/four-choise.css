@@ -6,15 +6,6 @@ h1{
     margin:  auto;
 }  
 
-.question{
-    text-align: center;
-    font-size: 2rem;
-    background-color: gray;
-    width: 60%;
-    height: 5rem; 
-    margin: auto;
-    line-height: 200%;
-}
 .choiceQuestion{
     width: 80%;
     margin: auto;
