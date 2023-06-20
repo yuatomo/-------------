@@ -1,12 +1,11 @@
 h1{
-    font-size: 2rem;
-    border-bottom:3px solid #09cf30;
-    text-align: center;
-    width: 53%;
-    margin: 25px auto;
-    position: relative;
-    top:-30px;
-
+	box-sizing: border-box;
+	margin: 0 auto;
+	font-size: 20px;
+	border-bottom:3px solid #09cf30;
+	text-align: center;
+	width: 70%;
+	padding: 1vh 0;
 }
 ::placeholder{
     color: black;
@@ -55,49 +54,54 @@ h1{
 	transition: 0.5s;
     font-size: 20px;
     position: relative;
-    top:-100px;
+    top:10px;
 }
-/*回答ボタン*/
-
-.answer {
+  /*回答ボタン*/
+  .solve {
     display: inline-block;
-    padding: 0.5em 200px;
+    padding: 0.5em 3.5em;
     text-decoration: none;
-    background: #668ad8;/*ボタン色*/
+    background: #FF6600;/*ボタン色*/
     color: #FFF;
     border-bottom: solid 4px #627295;
-    border-radius: 3px;
+    border-radius: 30%;
     position: relative;
-    left: 150px;
-    top:-110px;
+    left: 250px;
+    top:10px;
   }
-  .answer:active {
+  .solve:active {
     /*ボタンを押したとき*/
     -webkit-transform: translateY(4px);
-    transform: translateY(4px);/*下に動く*/
+    transform: translateY(1%);/*下に動く*/
     border-bottom: none;/*線を消す*/
   }
 
+  .solve:hover{
+    background-color: #668ad8
+  }
   /*スキップボタン*/
 
   .skip {
     display: inline-block;
-    padding: 0.5em 20px;
+    padding: 0.5em 1em;
     text-decoration: none;
-    background: #668ad8;/*ボタン色*/
+    background: #FF6600;/*ボタン色*/
     color: #FFF;
     border-bottom: solid 4px #627295;
-    border-radius: 3px;
+    border-radius: 30%;
     position: relative;
-    left: 500px;
-    top:-120px;
+    left: 400px;
   }
   .skip:active {
     /*ボタンを押したとき*/
     -webkit-transform: translateY(4px);
-    transform: translateY(4px);/*下に動く*/
+    transform: translateY(1%);/*下に動く*/
     border-bottom: none;/*線を消す*/
   }
+  .skip:hover{
+    background-color: #668ad8
+  }
+
 
   /*正答率表示ラベル*/
   .Correctanswerrate{
@@ -114,31 +118,34 @@ h1{
 	transition: 0.5s;
     font-size: 20px;
     position: relative;
-    top:-80px;
+    top:-40px;
     
 }
 
 /*中断するボタン*/
 .interruption {
-    display: inline-block;
-    padding: 0.5em 10px;
-    text-decoration: none;
-    background: #668ad8;/*ボタン色*/
-    color: #FFF;
-    border-bottom: solid 4px #627295;
-    border-radius: 3px;
-    position: relative;
-    left: 80px;
-    top:-40px;
-  }
-  .interruption:active {
-    /*ボタンを押したとき*/
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);/*下に動く*/
-    border-bottom: none;/*線を消す*/
-  }
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #808000;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 30%;
+  position: relative;
+  left: 60px;
+}
+.interruption:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(1%);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+.interruption:hover{
+  background-color: #668ad8
+}
 /*回答分を上にあげる処理*/
   .Answersentence{
     position: relative;
-    top:-110px;
+    top:0px;
   }

@@ -60,7 +60,7 @@ input[type="submit"] {
   width: 100%;
   margin: 3vh auto;
   padding: 3px;
-  background-color: #4caf50;
+  background-color: #FF6600;
   border: none;
   border-radius: 3px;
   color: #fff;
@@ -69,5 +69,5 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #FF6600
+  background-color: #668ad8
 }
