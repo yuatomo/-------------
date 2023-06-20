@@ -9,35 +9,75 @@ h1{
 	padding: 1vh 0;
 }
 
+/* メイン */
 
+.container {
+	display: block;
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	padding: 5% 0;
+	margin: 0 auto;
+}
+
+/* 四択or記述 */
 .problemselection{
     text-align: center;
+	margin: 0 auto 2vh auto;
 }
 
-.summary{
-    text-align: center;
-    margin-right: 300px;
+
+.flexgenre{
+	display: flex;
+	margin: 0 auto 2vh auto;
 }
 
-.Genreselection{
-    margin-left:180px;
+label{
+	display: block;
+}
+/* ジャンル選択 */
+.checkedgenre{
+	width: 50%;
 }
 
+/* 問題数　間違った問題 */
 .questioninput{
-    text-align: center;
-    margin-left: 200px;
-    margin-top: 10px;
-    
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.summary label{
+	margin-bottom: 1vh;
+}
+
+.Genreselection label{
+	margin-bottom: 1vh;
+}
+
+/* 分類　小　*/
+.Genreselection{
+	margin-left: 2vw;
+}
+
+.num{
+	display: flex;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.textnum{
+	box-sizing: border-box;
+	width: 100%;
 }
 
 .startbutton {
 	display: block;
 	text-align: center;
-	vertical-align: middle;
 	text-decoration: none;
-	width: 380px;
-	margin: auto;
-	padding: 10px 80px;
+	width: 100%;
+	margin: 0 auto;
 	font-weight: bold;
 	border: 2px solid #808080;
 	color: #000000;
@@ -45,17 +85,3 @@ h1{
     font-size: 20px;
 }
 
-.label{
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-	width: 300px;
-	margin: auto;
-	padding: 10px 80px;
-	font-weight: bold;
-	border: 2px solid #808080;
-	color: #000000;
-	transition: 0.5s;
-    font-size: 20px;
-}
