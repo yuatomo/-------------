@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>基本情報技術者試験×クイズ</title>
-        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="../css/navigation.css">
+        <link rel="stylesheet" href="css/description.css">
         <script src="../js/navigation.js"></script>
     </head>
     <body>
@@ -28,7 +29,20 @@
             </ul>
         </nav>
         <div class="frame-gray">
-            <div class="frame-white"></div>
+            <div class="frame-white">
+                <h1>記述問題</h1>
+                <a class="interruption">中断する</a>
+                <div>
+                    <a class="Correctanswerrate">正答率</a><a class="skip">スキップ</a>
+                </div>
+                <a class="label">問題文</a>
+                <br>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <textarea  style="width: 70%; height: 8rem;  border:2px solid gray ;" placeholder="回答文"></textarea>
+                    </div>
+                    <br>
+                    <a class="answer">回答</a>
+            </div>
         </div>
     </body>
 </html>
