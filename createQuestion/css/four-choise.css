@@ -1,11 +1,11 @@
 h1{
-	box-sizing: border-box;
-	margin: 0 auto;
-    font-size: 20px;
-    border-bottom:3px solid #09cf30;
-    text-align: center;
-    width: 70%;
-	padding: 1vh 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 20px;
+  border-bottom:3px solid #09cf30;
+  text-align: center;
+  width: 70%;
+  padding: 1vh 0;
 }
 
 ::placeholder{
