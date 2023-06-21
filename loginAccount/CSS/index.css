@@ -15,6 +15,7 @@ h1{
 
 .container {
 	box-sizing: border-box;
+	width: 70%;
 	height: 100%;
 	padding: 5% 0;
 	margin: 0 auto;
@@ -39,8 +40,16 @@ label {
 .form-group {
   box-sizing: border-box;
   display: block;
+  margin: 0 auto 2vh auto;
+  width: 100%;
+}
+
+.createbutton{
+  box-sizing: border-box;
+  display: block;
   margin: 0 auto;
-  width: 70%;
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -55,18 +64,14 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  
-  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 auto;
   padding: 0.5em 3.5em;
-  text-decoration: none;
   background: #FF6600;/*ボタン色*/
   color: #FFF;
   border-bottom: solid 4px #627295;
   border-radius: 30%;
-  height: auto;
-  position: relative;
-  left: 150px;
-  top:10px;
+ 
 }
 
 input[type="submit"]:hover {
