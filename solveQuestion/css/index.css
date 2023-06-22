@@ -73,15 +73,23 @@ label{
 }
 
 .startbutton {
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	width: 100%;
-	margin: 0 auto;
-	font-weight: bold;
-	border: 2px solid #808080;
-	color: #000000;
-	transition: 0.5s;
-    font-size: 20px;
-}
+    display: inline-block;
+    padding: 0.5em 3.5em;
+    text-decoration: none;
+    background: #FF6600;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 30%;
+    position: relative;
+    left: 150px;
+  }
+  .startbutton:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(1%);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+  }
 
+  .startbutton:hover{
+    background-color: #668ad8
+  }
