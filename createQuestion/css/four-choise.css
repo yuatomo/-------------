@@ -21,18 +21,21 @@ h1{
     width: 80%;
     margin: auto;
 }
-.choice{
-    text-align: center;
-    background-color: gray;
-    width: 2rem;
-    height: 2rem; 
-    margin-right: auto;
-    position: relative;
-    top: 2rem;
-    left: 0%;
-    line-height: 200%;
+.container {
+	display: block;
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	padding: 5% 0;
+	margin: 0 auto;
 }
 
+.answer{
+  width: 90%;
+  height: 2rem;
+  background-color: #C0C0C0;
+  margin-top: 1rem;
+}
 .create {
     display: inline-block;
     padding: 0.5em 3.5em;
@@ -42,8 +45,7 @@ h1{
     border-bottom: solid 4px #627295;
     border-radius: 30%;
     height: auto;
-    position: relative;
-    left: 150px;
+    margin: 0 auto;
   }
   .create:active {
     /*ボタンを押したとき*/
