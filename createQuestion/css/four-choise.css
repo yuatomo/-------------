@@ -7,6 +7,11 @@ h1{
   width: 70%;
   padding: 1vh 0;
 }
+.question{
+  width: 80%;
+  height: 5rem;
+  background-color: #C0C0C0;
+}
 
 ::placeholder{
     color: black;
@@ -17,9 +22,22 @@ h1{
     line-height: 200%;
   }
 
+  .number{
+    display: flex; justify-content: flex-end;
+    margin-top: 1rem;
+  }
+
+  .button
+  {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1rem;
+  }
+
 .choiceQuestion{
     width: 80%;
     margin: auto;
+    margin: 2em;
 }
 .container {
 	display: block;
@@ -35,17 +53,18 @@ h1{
   height: 2rem;
   background-color: #C0C0C0;
   margin-top: 1rem;
+  margin-left: 2rem;
 }
 .create {
-    display: inline-block;
-    padding: 0.5em 3.5em;
-    text-decoration: none;
-    background: #FF6600;/*ボタン色*/
-    color: #FFF;
-    border-bottom: solid 4px #627295;
-    border-radius: 30%;
-    height: auto;
-    margin: 0 auto;
+  display: inline-block;
+  padding: 2em 6em;
+  text-decoration: none;
+  background: #FF6600;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 30%;
+  margin-left: 30%;
+  margin-top: 1rem;
   }
   .create:active {
     /*ボタンを押したとき*/

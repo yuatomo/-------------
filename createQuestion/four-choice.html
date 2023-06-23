@@ -33,32 +33,31 @@
                 <h1>四択問題</h1>
             <div class="container">
                 
-                <div style="display: flex; justify-content: center; align-items: center;">
-                    <textarea  style="width: 80%; height: 5rem; background-color: #C0C0C0;" placeholder="問題文"></textarea>
+                <div style="display: flex; justify-content: center;">
+                    <textarea class="question" placeholder="問題文"></textarea>
                 </div>
 
                 <div class="choiceQuestion">
-                    <div style="display: flex; justify-content: flex-end;">
-                        <input type="radio" name="askaquestion" value="a">ア
+                    <div class="1 number">
+                        <input type="button" name="askaquestion" value="ア" class="A button">
                     <textarea class="A answer"  placeholder="回答文"></textarea>
                 </div>
                 
-                <div style="display: flex; justify-content: center; justify-content: flex-end;">
-                    <input type="radio" name="askaquestion" value="i">イ
+                <div class="2 number"">
+                    <input type="button" name="askaquestion" value="イ" class="B button">
                     <textarea class="B answer"  placeholder="回答文"></textarea>
                 </div>
 
-                <div style="display: flex; justify-content: flex-end;">
-                    <input type="radio" name="askaquestion" value="u">ウ
+                <div class="3 number">
+                    <input type="button" name="askaquestion" value="ウ" class="C button">
                     <textarea class="C answer"  placeholder="回答文"></textarea>
                 </div>
 
-                <div style="display: flex; justify-content: flex-end;">
-                    <input type="radio" name="askaquestion" value="e">エ
+                <div class="4 number">
+                    <input type="button" name="askaquestion" value="エ" class="D button">
                     <textarea class="D answer"  placeholder="回答文"></textarea>
                 </div>
-                </div>
-                <h2 class="create">作成</h2>
+                <input type="button" class="create" value="作成">
             </div>
         </div>
     </body>
