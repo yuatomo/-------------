@@ -23,16 +23,19 @@ h1{
   }
 
   .create {
-    display: inline-block;
-    padding: 0.5em 3.5em;
-    text-decoration: none;
-    background: #FF6600;/*ボタン色*/
-    color: #FFF;
-    border-bottom: solid 4px #627295;
-    border-radius: 30%;
-    height: auto;
-    position: relative;
-    left: 150px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0.3em 3.5em;
+  background: #FF6600;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 30%;
+  width: 30%;
+  text-align: center;
+  
+    
+
+
   }
   .create:active {
     /*ボタンを押したとき*/
@@ -44,3 +47,42 @@ h1{
   .create:hover{
     background-color: #668ad8
   }
+
+.mondaibun{
+  justify-content: center; 
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+  
+}
+
+.Problemstatement {
+  width: 100%; 
+  height: 10rem;
+  background-color: #C0C0C0;
+}
+
+.Answerinput{
+  width: 100%; 
+  height: 8rem;  
+  border:2px solid gray ;
+}
+
+.kaitoubun{
+  justify-content: center; 
+  align-items: center;
+  display: flex;
+
+}
+
+.container {
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	padding: 5% 0;
+	margin: 0 auto;
+  }
+
+.Problemcentering{
+  text-align: center;
+}
