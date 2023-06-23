@@ -31,15 +31,19 @@
         <div class="frame-gray">
             <div class="frame-white">
                 <h1>記述問題</h1>
-                <div style="display: flex; justify-content: center; align-items: center;">
-                <textarea  style="width: 70%; height: 10rem;background-color: #C0C0C0;" class="Problemstatement" placeholder="問題文"></textarea>
-                </div>
-                <br>
-                <div style="display: flex; justify-content: center; align-items: center;">
-                    <textarea  style="width: 70%; height: 8rem;  border:2px solid gray ;" placeholder="回答文"></textarea>
+                <div class="container">
+                    
+                    <div class="mondaibun">
+                    <textarea   class="Problemstatement" placeholder="問題文"></textarea>
                     </div>
-                    <br>
-                    <h2 class="create">作成</h2>
+                    
+                    <div class="kaitoubun">
+                    <textarea  class="Answerinput" placeholder="回答文"></textarea>
+                    </div>
+                    <div class="Problemcentering">
+                    <input type="button" class="create" value="作成">
+                    </div>
+                </div>
             </div>
         </div>
     </body>
