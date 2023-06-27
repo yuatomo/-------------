@@ -16,29 +16,7 @@ h1{
     line-height: 400%;
   }
 
-.create{
-    display: inline-block;
-  text-decoration: none;
-  background: orange;
-  color: #FFF;
-  width: 120px;
-  height: 80px;
-  line-height: 500%;
-  border-radius: 50%;
-  text-align: center;
-  overflow: hidden;
-  box-shadow: 0px 0px 0px 5px orange;
-  border: dashed 1px #FFF;
-  transition: .4s;
-  position: absolute;
-  left: 50%;
-  margin-left: -70px;
-}
 
-.create:hover {
-    background: #668ad8;
-    box-shadow: 0px 0px 0px 5px #668ad8;
-  }
 
   .label{
 	display: block;
@@ -52,45 +30,52 @@ h1{
 	border: 2px solid #808080;
 	color: #000000;
 	transition: 0.5s;
-    font-size: 20px;
-    position: relative;
-    top:10px;
+  font-size: 20px;
+  position: relative;
+  top:10px;
 }
   /*回答ボタン*/
   .solve {
-    display: inline-block;
-    padding: 0.5em 3.5em;
-    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0.3em 3.5em;
     background: #FF6600;/*ボタン色*/
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 30%;
-    position: relative;
-    left: 250px;
-    top:10px;
-  }
-  .solve:active {
-    /*ボタンを押したとき*/
-    -webkit-transform: translateY(4px);
-    transform: translateY(1%);/*下に動く*/
-    border-bottom: none;/*線を消す*/
-  }
+    width: 30%;
+    text-align: center;
+    
+      
+  
+  
+    }
+    .solve:active {
+      /*ボタンを押したとき*/
+      -webkit-transform: translateY(4px);
+      transform: translateY(1%);/*下に動く*/
+      border-bottom: none;/*線を消す*/
+    }
+  
+    .solve:hover{
+      background-color: #668ad8
+    }
+  
+/*問題をスキップ*/
+.skip {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0.3em 3.5em;
+  background: #FF6600;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 30%;
+  width: 30%;
+  text-align: center;
+  
+    
 
-  .solve:hover{
-    background-color: #668ad8
-  }
-  /*スキップボタン*/
 
-  .skip {
-    display: inline-block;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    background: #FF6600;/*ボタン色*/
-    color: #FFF;
-    border-bottom: solid 4px #627295;
-    border-radius: 30%;
-    position: relative;
-    left: 400px;
   }
   .skip:active {
     /*ボタンを押したとき*/
@@ -98,9 +83,16 @@ h1{
     transform: translateY(1%);/*下に動く*/
     border-bottom: none;/*線を消す*/
   }
+
   .skip:hover{
     background-color: #668ad8
   }
+
+
+/*スキップ・中断・正当*/
+.tes{
+  display: flex;
+}
 
 
   /*正答率表示ラベル*/
@@ -144,8 +136,51 @@ h1{
 .interruption:hover{
   background-color: #668ad8
 }
-/*回答分を上にあげる処理*/
+/*回答文入力*/
   .Answersentence{
-    position: relative;
-    top:0px;
+    width: 100%; 
+    height: 8rem;  
+    border:2px solid gray ;
   }
+
+
+  /*回答文*/
+  .kaitoubun{
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+  
+  }
+
+/*問題文*/
+.mondaibun{
+  justify-content: center; 
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+  
+}
+
+
+.container {
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	padding: 5% 0;
+	margin: 0 auto;
+  }
+/*データベースから出力問題文*/
+  .Problemstatement{
+  box-sizing: border-box;
+  width: 100%; 
+  height: 10rem;
+  background-color: #FFF;
+  border:3px solid #000000;
+  }
+
+  /*回答ボタン中央寄せ*/
+.answerbutton{
+  text-align: center;
+ }
+
+ 
