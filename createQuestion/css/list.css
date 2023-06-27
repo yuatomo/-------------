@@ -10,7 +10,7 @@ h1{
 
 .container {
 	box-sizing: border-box;
-	width: 100%;
+	width: 70%;
 	height: 100%;
 	padding: 5% 0;
 	margin: 0 auto;
@@ -18,25 +18,21 @@ h1{
 
 
 .question {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+    justify-content: center;
 	text-decoration: none;
-	width: 50%;
-	margin: auto;
-	padding: 10px 150px;
+	width: 100%;
+	margin: 0 auto 3% auto;
 	font-weight: bold;
-	border: 2px solid #808080;
-	color: #000000;
+	border: 2px solid grey;
+	color: black;
 	transition: 0.5s;
-    font-size: 20px;
-    position: relative;
-    top: -90px
 }
-/*ボタンにカーソルを合わせたときの処理*/
 .question:hover {
-    color:#fff;
-    background: #27acd9;
+	color: #fff;
+	background: #27acd9;
 }
 
 .Garbagecan{
@@ -56,5 +52,6 @@ h1{
     top: -100px;
     right: 60px;
 }
+
 
 
