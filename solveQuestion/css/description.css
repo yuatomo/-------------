@@ -43,7 +43,6 @@ h1{
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 30%;
-    width: 30%;
     text-align: center;
     
       
@@ -65,14 +64,13 @@ h1{
 .skip {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0.3em 3.5em;
+  padding: 0.3em 1.5em;
   background: #FF6600;/*ボタン色*/
   color: #FFF;
   border-bottom: solid 4px #627295;
   border-radius: 30%;
-  width: 30%;
-  text-align: center;
-  
+
+ 
     
 
 
@@ -108,23 +106,23 @@ h1{
 	border: 2px solid #808080;
 	color: #000000;
 	transition: 0.5s;
-    font-size: 20px;
-    position: relative;
-    top:-40px;
-    
+  font-size: 20px;
+  position: relative;
+  top:-40px;
+  
 }
 
 /*中断するボタン*/
 .interruption {
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 0.3em 1.5em;
   text-decoration: none;
   background: #808000;/*ボタン色*/
   color: #FFF;
   border-bottom: solid 4px #627295;
   border-radius: 30%;
   position: relative;
-  left: 60px;
+ 
 }
 .interruption:active {
   /*ボタンを押したとき*/
@@ -183,4 +181,3 @@ h1{
   text-align: center;
  }
 
- 
