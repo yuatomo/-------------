@@ -9,13 +9,13 @@ h1{
 }
 
 .label{
-	display: block;
+	box-sizing: border-box;
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
 	width: 300px;
 	margin: auto;
-	padding: 10px 80px;
+	padding: 10px 50px;
 	font-weight: bold;
 	border: 2px solid #808080;
 	color: #000000;
@@ -33,7 +33,7 @@ h1{
     border-bottom: solid 4px #627295;
     border-radius: 30%;
     position: relative;
-    left: 300px;
+    
   }
   .Genreselectionbutton:active {
     /*ボタンを押したとき*/
@@ -45,25 +45,55 @@ h1{
     background-color: #668ad8
   }
 
-
+.Genreselection{
+	text-align: center;
+}
 
 
 .aws{
-    display: block;
+    box-sizing: border-box;
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
 	width: 300px;
+	height: 100px;
 	margin: auto;
-	padding: 10px 80px;
+	padding: 10px 56px;
 	font-weight: bold;
 	border: 2px solid #808080;
 	color: #000000;
 	transition: 0.5s;
     font-size:30px;
 }
+.te{
+	bottom: auto;
+	text-align: right;
+}
 
 .questioninput {
     margin-bottom: 50px;
 }
 
+.container {
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	padding: 5% 0;
+	margin: 0 auto;
+  }
+
+.Correctanswerrate{
+	justify-content: center; 
+	align-items: center;
+	display: flex;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.seitou{
+	justify-content: center; 
+	align-items: center;
+	display: flex;
+	text-align: center;
+	margin-bottom:10px;
+}

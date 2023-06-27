@@ -1,28 +1,23 @@
-h1 {
+h1{
+	box-sizing: border-box;
+	margin: 0 auto;
     font-size: 20px;
+    border-bottom:3px solid #09cf30;
     text-align: center;
-    bottom: -10px;
-}
-/*h1の下の緑の線*/
-.green{
-    position: relative;
-    width: 55%; /* 線の長さを調節する部分 */
-    height: 3px;
-    background-color: #008000; /* 緑色の線 */
-    margin: 0 auto; /* 中央に配置するためのマージン */
-    
+    width: 70%;
+	padding: 1vh 0;
 }
 
 
 /*成績表示*/
 .Grade {
-	display: block;
+	box-sizing: border-box;
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
 	width: 300px;
 	margin: auto;
-	padding: 3px 80px;
+	padding: 3px 200px;
 	font-weight: bold;
 	border: 2px solid #808080;
 	color: #000000;
@@ -30,11 +25,22 @@ h1 {
     font-size: 20px;
 }
 
+.Listofgrades{
+	text-align: center;
+}
+.while{
+	margin-bottom: 20px;
+}
+
+
+/*プルダウン*/
 .cp_ipselect {
 	overflow: hidden;
-	width: 20%;
+	width: 30%;
 	margin: 1px auto;
-	text-align: center;
+	margin: 0 0 0 auto;
+	top: -10px;
+	
 }
 .cp_ipselect select {
 	width: 100%;
@@ -49,6 +55,7 @@ h1 {
 	box-shadow: none;
 	-webkit-appearance: none;
 	appearance: none;
+	text-align: right;
 }
 .cp_ipselect select::-ms-expand {
     display: none;
@@ -77,3 +84,18 @@ h1 {
 	padding: 8px 38px 8px 8px;
 	color: #000000;
 }
+
+/*プルダウン位置調整*/
+.selection{
+	text-align: right;
+}
+
+.container {
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	padding: 5% 0;
+	margin: 0 auto;
+  }
+
+  
