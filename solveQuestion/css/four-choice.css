@@ -37,6 +37,8 @@ h1{
     line-height: 200%;
 }
 .answer{
+  display: flex;
+  justify-content: flex-end;
     text-align: center;
     position: relative;
     left: 0%;
