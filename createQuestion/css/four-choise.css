@@ -23,7 +23,8 @@ h1{
   }
 
   .number{
-    display: flex; justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
     margin-top: 1rem;
   }
 
