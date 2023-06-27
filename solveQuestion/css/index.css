@@ -85,8 +85,7 @@ label{
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 30%;
-    position: relative;
-    left: 30%;
+	margin-left: 30%;
   }
   .startbutton:active {
     /*ボタンを押したとき*/
@@ -98,3 +97,10 @@ label{
   .startbutton:hover{
     background-color: #668ad8
   }
+  .line{
+	box-sizing: border-box;
+    width: 70%;
+    height: 3px;
+    background-color: #808080;
+    margin: 1% auto 3% auto;
+}
