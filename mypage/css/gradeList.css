@@ -8,25 +8,24 @@ h1{
 	padding: 1vh 0;
 }
 
-
 /*成績表示*/
 .Grade {
 	box-sizing: border-box;
-	text-align: center;
-	vertical-align: middle;
+	display: flex;
+	align-items: center;
+    justify-content: center;
 	text-decoration: none;
-	width: 300px;
-	margin: auto;
-	padding: 3px 200px;
+	height: 7%;
+	width: 100%;
+	margin: 0 auto 3% auto;
 	font-weight: bold;
-	border: 2px solid #808080;
-	color: #000000;
+	border: 2px solid grey;
+	color: black;
 	transition: 0.5s;
-    font-size: 20px;
 }
-
-.Listofgrades{
-	text-align: center;
+.Grade:hover {
+	color: #fff;
+	background: #27acd9;
 }
 .while{
 	margin-bottom: 20px;
