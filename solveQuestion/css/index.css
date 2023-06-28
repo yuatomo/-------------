@@ -35,6 +35,7 @@ h1{
 .flexgenre{
 	display: flex;
 	margin: 0 auto 2vh auto;
+	margin-left: 10%;
 }
 
 label{
@@ -43,14 +44,12 @@ label{
 /* ジャンル選択 */
 .checkedgenre{
 	width: 50%;
+	margin-top: -50vh;
 }
 
 /* 問題数　間違った問題 */
 .questioninput{
-	width: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	margin-top: -50vh;
 }
 
 .summary label{
@@ -68,8 +67,10 @@ label{
 
 .num{
 	display: flex;
-	box-sizing: border-box;
-	width: 100%;
+	width: 90%;
+    text-align: center;
+	margin: 0 auto 2vh auto;
+	margin-left: 20%;
 }
 
 .textnum{
@@ -85,7 +86,7 @@ label{
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 30%;
-	margin-left: 30%;
+	margin-left: 32%;
   }
   .startbutton:active {
     /*ボタンを押したとき*/
@@ -103,4 +104,11 @@ label{
     height: 3px;
     background-color: #808080;
     margin: 1% auto 3% auto;
+}
+.line2{
+    width: 3px;
+    height: 50vh;
+    background-color: #808080;
+    margin-left: 50%;
+
 }
