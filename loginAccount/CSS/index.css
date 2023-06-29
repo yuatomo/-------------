@@ -30,10 +30,10 @@ label {
 
 .user-icon {
   box-sizing: border-box;
-  width: 15%;
+  width: 30px;
 }
 .pass-icon {
-  width: 11%;
+  width: 30px;
 }
 
 
@@ -45,7 +45,7 @@ label {
   width: 100%;
 }
 
-.createbutton{
+.login-button{
   box-sizing: border-box;
   display: block;
   margin: 0 auto;
@@ -66,7 +66,6 @@ input[type="password"] {
 
 input[type="submit"] {
   box-sizing: border-box;
-  margin-left: 35%;
   padding: 0.5em 3.5em;
   background: #FF6600;/*ボタン色*/
   color: #FFF;
@@ -84,3 +83,4 @@ input[type="submit"]:active {
   transform: translateY(1%);/*下に動く*/
   border-bottom: none;/*線を消す*/
 }
+

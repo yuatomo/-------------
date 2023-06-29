@@ -23,7 +23,7 @@ h1{
 	align-items: center;
     justify-content: center;
 	text-decoration: none;
-	width: 100%;
+	width: 80%;
 	margin: 0 auto 3% auto;
 	font-weight: bold;
 	border: 2px solid grey;
@@ -35,23 +35,59 @@ h1{
 	background: #27acd9;
 }
 
-.Garbagecan{
-    margin-left: 112%;
-    text-align: center;
-    width: 30px;
-    position: relative;
-    top:-60px;
-    right: 60px;
-}
-
-.pencil{
-    margin-left: 105%;
-    text-align: center;
-    width: 30px;
-    position: relative;
-    top: -100px;
-    right: 60px;
+.tes{
+	display: flex;
+	margin-top: -30px;
 }
 
 
+.delete {
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0.3em 3.5em;
+	background: silver	;/*ボタン色*/
+	color: #FFF;
+	border-bottom: solid 4px #627295;
+	border-radius: 30%;
+	width: 30%;
+	text-align: center;
+	margin-top: 1rem;
+	}
+.delete:active {
+	/*ボタンを押したとき*/
+	-webkit-transform: translateY(4px);
+	transform: translateY(1%);/*下に動く*/
+	border-bottom: none;/*線を消す*/
+	}
+
+	.delete:hover{
+	background-color: #668ad8
+	}
+
+	.edit {
+		box-sizing: border-box;
+		margin: 0 auto;
+		padding: 0.3em 3.5em;
+		background: silver	;/*ボタン色*/
+		color: #FFF;
+		border-bottom: solid 4px #627295;
+		border-radius: 30%;
+		width: 30%;
+		text-align: center;
+		margin-top: 1rem;
+		}
+	.edit:active {
+		/*ボタンを押したとき*/
+		-webkit-transform: translateY(4px);
+		transform: translateY(1%);/*下に動く*/
+		border-bottom: none;/*線を消す*/
+		}
+	
+		.edit:hover{
+		background-color: #668ad8
+		}
+	
+.Problemlist{
+	margin-top: 30px;
+}
 
