@@ -21,6 +21,7 @@ h1{
 	margin: 0 auto;
   }
 
+
 /* 小見出し */
 label {
   font-weight: bold;
@@ -48,7 +49,7 @@ label {
   box-sizing: border-box;
   display: block;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
 
@@ -65,13 +66,12 @@ input[type="password"] {
 
 input[type="submit"] {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin-left: 35%;
   padding: 0.5em 3.5em;
   background: #FF6600;/*ボタン色*/
   color: #FFF;
   border-bottom: solid 4px #627295;
   border-radius: 30%;
- 
 }
 
 input[type="submit"]:hover {

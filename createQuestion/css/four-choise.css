@@ -8,8 +8,8 @@ h1{
   padding: 1vh 0;
 }
 .question{
-  width: 80%;
-  height: 5rem;
+  width: 100%;
+  height: 10vh;
   background-color: #C0C0C0;
 }
 
@@ -24,18 +24,18 @@ h1{
 
   .number{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 1rem;
   }
 
   .button
   {
-    width: 2rem;
-    height: 2rem;
+    width: 2vw;
+    height: 6vh;
   }
 
 .choiceQuestion{
-    width: 80%;
+    width: 100%;
     margin: auto;
 
 }
@@ -50,9 +50,9 @@ h1{
 
 .answer{
   width: 90%;
-  height: 2rem;
+  height: 5vh;
   background-color: #C0C0C0;
-  margin-left: 2rem;
+  margin-left: 2vh;
 }
 .create {
   box-sizing: border-box;
@@ -60,7 +60,7 @@ h1{
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 2vh;
   }
 
   input[type="submit"] {
@@ -74,5 +74,8 @@ h1{
    
   }
 
-
+.mondaibun {
+  display: flex; 
+  justify-content: center;
+}
 

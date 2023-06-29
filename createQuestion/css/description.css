@@ -11,9 +11,7 @@ h1{
 ::placeholder{
     color: black;
     text-align: center;
-    position: relative;
-    top: 2rem;
-    left: 0%;
+    
     line-height: 400%;
   }
 
@@ -48,20 +46,18 @@ h1{
 .mondaibun{
   justify-content: center; 
   align-items: center;
-  display: flex;
   margin-bottom: 20px;
-  
 }
 
 .Problemstatement {
   width: 100%; 
-  height: 10rem;
+  height: 20vh;
   background-color: #C0C0C0;
 }
 
 .Answerinput{
   width: 100%; 
-  height: 8rem;  
+  height: 20vh;  
   border:2px solid gray ;
 }
 
