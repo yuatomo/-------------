@@ -63,7 +63,7 @@ h1{
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0.3em 1.5em;
-  background: #FF6600;/*ボタン色*/
+  background: gray	;/*ボタン色*/
   color: #FFF;
   border-bottom: solid 4px #627295;
   border-radius: 30%;
