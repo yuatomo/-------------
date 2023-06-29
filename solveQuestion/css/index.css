@@ -59,18 +59,38 @@ label{
 .Genreselection label{
 	margin-bottom: 1vh;
 }
-
+.Genreselection1 label{
+	margin-bottom: 1vh;
+}
+.summary{
+	margin-right: 5vw;
+}
 /* 分類　小　*/
 .Genreselection{
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	left: 30%;
+	margin: 2vh auto 0 auto;
+	
 	margin-left: 2vw;
+}
+.Genreselection1{
+	margin-left: 2vw;
+}
+.checkbutton{
+	width: auto;
+}
+.checkbutton1{
+	width: auto;
 }
 
 .num{
 	display: flex;
 	width: 90%;
-    text-align: center;
+	justify-content: space-around;
 	margin: 0 auto 2vh auto;
-	margin-left: 20%;
 }
 
 .textnum{
