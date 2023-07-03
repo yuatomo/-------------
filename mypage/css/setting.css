@@ -38,7 +38,6 @@ h1{
 input[type="range"] { 
     margin-left: 30%;
     -webkit-appearance: none;
-    position: relative;
     overflow: hidden;
     height: 20px;
     width: 200px;
