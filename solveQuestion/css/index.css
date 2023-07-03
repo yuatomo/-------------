@@ -91,13 +91,16 @@ label{
 	width: 90%;
 	justify-content: space-around;
 	margin: 0 auto 2vh auto;
+	margin-right: 5vw;
 }
 
 .textnum{
 	box-sizing: border-box;
 	width: 100%;
 }
-
+.suu{
+	display: flex;
+}
 .startbutton {
     display: inline-block;
     padding: 0.5em 3.5em;
