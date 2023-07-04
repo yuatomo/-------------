@@ -28,11 +28,13 @@ h1{
     margin-top: 1rem;
   }
 
+
   .button
   {
-    width: 2vw;
-    height: 6vh;
+    width: 5vw;
+    height: 5vh;
   }
+
 
 .choiceQuestion{
     width: 100%;
@@ -48,11 +50,12 @@ h1{
 	margin: 0 auto;
 }
 
+
 .answer{
   width: 90%;
   height: 5vh;
   background-color: #C0C0C0;
-  margin-left: 2vh;
+  margin-left: 2vw;
 }
 .create {
   box-sizing: border-box;
