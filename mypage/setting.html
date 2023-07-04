@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <h2>
+            <div class="top">
                 <a href="index.html">
                     <img class="logo" src="../image/logo.png" alt="ロゴ">
                 </a>
@@ -18,7 +18,7 @@
                 <a class="mypage" href="../mypage/index.html">
                     <img class="icon" src="../image/user.png" alt="マイページアイコン">
                 </a>
-            </h2>
+            </div>
         </header>
         <nav>
             <ul>
@@ -33,14 +33,22 @@
             <div class="frame-white">
                 <h1>設定</h1>
                 <div class="container">
-                    <a  class="Button">BGM</a>
-                    <input type="range" id="slider01" min="0" max="100" step="1" value="50" class="slider01" oninput="display_value_slider01();">
-                    <span id="slider01Value">50</span>
-                    <span id="display01"></span>
-                    <a  class="Button">SE</a>
-                    <input type="range" id="slider02" min="0" max="100" step="1" value="50" class="slider02"  oninput="display_value_slider02();">
-                    <span id="slider02Value">50</span>
-                    <span id="display02"></span>
+                    <h2>BGM</h2>
+                    <div class="container2">
+                        <div class="tyuuouyose">
+                            <input type="range" id="slider01" min="0" max="100" step="1" value="50" class="slider01" oninput="display_value_slider01();">
+                            <span id="slider01Value">50</span>
+                            <span id="display01"></span>
+                        </div>
+                    </div>
+                    <h2 class="sen">SE</h2>
+                    <div class="container2">
+                            <div class="tyuuouyose">
+                            <input type="range" id="slider02" min="0" max="100" step="1" value="50" class="slider02"  oninput="display_value_slider02();">
+                            <span id="slider02Value">50</span>
+                            <span id="display02"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
