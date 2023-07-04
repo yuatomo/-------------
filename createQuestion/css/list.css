@@ -1,12 +1,17 @@
+/* タイトル */
 h1{
 	box-sizing: border-box;
 	margin: 0 auto;
     font-size: 20px;
     border-bottom:3px solid #09cf30;
     text-align: center;
-    width: 50%;
+    width: 70%;
 	padding: 1vh 0;
 }
+
+
+
+/* メイン */
 
 .container {
 	box-sizing: border-box;
@@ -16,14 +21,13 @@ h1{
 	margin: 0 auto;
   }
 
-
 .question {
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
     justify-content: center;
 	text-decoration: none;
-	width: 80%;
+	width: 100%;
 	margin: 0 auto 3% auto;
 	font-weight: bold;
 	border: 2px solid grey;
@@ -43,8 +47,9 @@ h1{
 
 .delete {
 	box-sizing: border-box;
+	display: flex;
 	margin: 0 auto;
-	padding: 0.3em 3.5em;
+	padding: 0.3em 4.0em;
 	background: silver	;/*ボタン色*/
 	color: #FFF;
 	border-bottom: solid 4px #627295;
@@ -66,8 +71,9 @@ h1{
 
 	.edit {
 		box-sizing: border-box;
+		display: flex;
 		margin: 0 auto;
-		padding: 0.3em 3.5em;
+		padding: 0.3em 4.0em;
 		background: silver	;/*ボタン色*/
 		color: #FFF;
 		border-bottom: solid 4px #627295;

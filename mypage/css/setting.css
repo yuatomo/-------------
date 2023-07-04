@@ -36,11 +36,11 @@ h1{
     padding: 1vh 0;
 }
 input[type="range"] { 
-    margin-left: 10vw;
+    margin-left: 30%;
     -webkit-appearance: none;
     overflow: hidden;
     height: 20px;
-    width: 30vh;
+    width: 200px;
     cursor: pointer;
     border-radius: 0; /* iOS */
 }
@@ -108,4 +108,3 @@ input[type="range"] {
 ::-ms-tooltip { 
     display: none;
 }
-
