@@ -50,6 +50,7 @@ label{
 /* 問題数　間違った問題 */
 .questioninput{
 	margin-top: -50vh;
+	margin-left: 1vw;
 }
 
 .summary label{
@@ -63,27 +64,24 @@ label{
 	margin-bottom: 1vh;
 }
 .summary{
-	margin-right: 5vw;
+	position: relative;
+	right: 4vw;
+}
+.summary1{
+	position: relative;
+	left: 3vw;
 }
 /* 分類　小　*/
 .Genreselection{
-	position: absolute;
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	left: 30%;
-	margin: 2vh auto 0 auto;
-	
-	margin-left: 2vw;
+	font-size: 1vw;
+	margin-right: 5vw;
 }
 .Genreselection1{
-	margin-left: 2vw;
-}
-.checkbutton{
-	width: auto;
-}
-.checkbutton1{
-	width: auto;
+	position: relative;
+	left: 6vw;
 }
 
 .num{
@@ -96,7 +94,8 @@ label{
 
 .textnum{
 	box-sizing: border-box;
-	width: 100%;
+	width: 5vw;
+	height: 3vh;
 }
 .suu{
 	display: flex;
@@ -129,7 +128,7 @@ label{
     margin: 1% auto 3% auto;
 }
 .line2{
-    width: 3px;
+    width: 2px;
     height: 50vh;
     background-color: #808080;
     margin-left: 50%;
