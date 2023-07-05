@@ -24,7 +24,7 @@ h1{
     justify-content: center;
 	text-decoration: none;
 	height: 7%;
-	width: 100%;
+	width: 70%;
 	margin: 0 auto 3% auto;
 	font-weight: bold;
 	border: 2px solid grey;
@@ -41,7 +41,7 @@ h1{
 	box-sizing: border-box;
     position: relative;
     width: 55%;
-    height: 3px;
+    height: 2px;
     background-color: #808080;
     margin: 5% auto 5% auto;
 }
