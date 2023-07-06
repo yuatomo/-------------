@@ -86,10 +86,9 @@ label{
 
 .num{
 	display: flex;
-	width: 90%;
+	width: 100%;
 	justify-content: space-around;
 	margin: 0 auto 2vh auto;
-	margin-right: 5vw;
 }
 
 .textnum{
