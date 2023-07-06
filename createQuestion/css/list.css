@@ -41,52 +41,44 @@ h1{
 
 .tes{
 	display: flex;
-	margin-top: -30px;
+	margin-top: -10px;
 }
 
 
 .delete {
 	box-sizing: border-box;
-	display: flex;
 	margin: 0 auto;
-	padding: 0.3em 4.0em;
-	background: silver	;/*ボタン色*/
+	padding: 0.3em 2.0em;
+	background: silver;/*ボタン色*/
 	color: #FFF;
 	border-bottom: solid 4px #627295;
 	border-radius: 30%;
-	width: 30%;
-	text-align: center;
-	margin-top: 1rem;
 	}
 .delete:active {
-	/*ボタンを押したとき*/
-	-webkit-transform: translateY(4px);
-	transform: translateY(1%);/*下に動く*/
-	border-bottom: none;/*線を消す*/
+   /*ボタンを押したとき*/
+   -webkit-transform: translateY(4px);
+   transform: translateY(1%);/*下に動く*/
+   border-bottom: none;/*線を消す*/
 	}
 
 	.delete:hover{
-	background-color: #668ad8
+		background-color: #668ad8
 	}
-
+/*silver*/
 	.edit {
 		box-sizing: border-box;
-		display: flex;
 		margin: 0 auto;
-		padding: 0.3em 4.0em;
-		background: silver	;/*ボタン色*/
+		padding: 0.3em 2.0em;
+		background: silver;/*ボタン色*/
 		color: #FFF;
 		border-bottom: solid 4px #627295;
 		border-radius: 30%;
-		width: 30%;
-		text-align: center;
-		margin-top: 1rem;
 		}
 	.edit:active {
-		/*ボタンを押したとき*/
-		-webkit-transform: translateY(4px);
-		transform: translateY(1%);/*下に動く*/
-		border-bottom: none;/*線を消す*/
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(1%);/*下に動く*/
+    border-bottom: none;/*線を消す*/
 		}
 	
 		.edit:hover{

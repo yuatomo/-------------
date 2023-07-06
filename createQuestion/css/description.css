@@ -20,28 +20,40 @@ h1{
     top: 10px;
   }
 
-  .create {
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0.3em 3.5em;
-  background: #FF6600;/*ボタン色*/
-  color: #FFF;
-  border-bottom: solid 4px #627295;
-  border-radius: 30%;
-  width: 30%;
-  text-align: center;
-  margin-top: 1vh;
+  input[type="submit"] {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0.5em 3.5em;
+    background: #FF6600;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 30%;
   }
-  .create:active {
+
+  input[type="submit"]:active {
     /*ボタンを押したとき*/
     -webkit-transform: translateY(4px);
     transform: translateY(1%);/*下に動く*/
     border-bottom: none;/*線を消す*/
   }
 
-  .create:hover{
+  input[type="submit"]:hover{
     background-color: #668ad8
   }
+
+
+
+
+  .create {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 2vh;
+    }
+
+
 
 .mondaibun{
   justify-content: flex-start; 
@@ -76,6 +88,4 @@ h1{
 	margin: 0 auto;
   }
 
-.Problemcentering{
-  text-align: center;
-}
+
