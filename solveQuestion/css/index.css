@@ -77,11 +77,12 @@ label{
 	flex-wrap: wrap;
 	width: 100%;
 	font-size: 1vw;
-	margin-right: 5vw;
+	position: relative;
+	right: 3vw;
 }
 .Genreselection1{
 	position: relative;
-	left: 6vw;
+	left: 4vw;
 }
 
 .num{
