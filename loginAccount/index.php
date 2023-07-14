@@ -8,14 +8,7 @@
         <script src="../js/navigation.js"></script>
     </head>
     <body>
-        <?php
-            session_start();
-
-            if (isset($_SESSION['username'])) {
-                // ログイン済み
-                echo "You are logged in as: " . $_SESSION['username'];
-            }
-        ?>
+        <?php include '../session.php'; ?>
         <header>
             <div class="top">
                 <a href="../index.html">
