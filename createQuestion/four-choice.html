@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>基本情報技術者試験×クイズ</title>
-        <link rel="stylesheet" href="../css/navigation.css">
-        <link rel="stylesheet" href="css/four-choise.css">
-        <script src="../js/navigation.js"></script>
-    </head>
-    <body>
-        <header>
-            <div class="top">
-                <a href="../index.html">
-                    <img class="logo" src="../image/logo.png" alt="ロゴ">
-                </a>
-                <a href="../index.html">基本情報技術者試験×クイズ</a>
-                <a class="mypage" href="../mypage/index.html">
-                    <img class="icon" src="../image/user.png" alt="マイページアイコン">
-                </a>
-            </div>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="index.html">作問</a></li>
-                <li><a href="../solveQuestion/index.html">問題</a></li>
-                <li><a href="../createAccount/index.html">新規登録</a></li>
-                <li><a href="../loginAccount/index.html">ログイン</a></li>
-                <li><a href="../mypage/setting.html">設定</a></li>
-            </ul>
-        </nav>
-        <div class="frame-gray">
-            <div class="frame-white">
-                <h1>四択問題</h1>
-                <div class="container">
-                    
+
+<head>
+    <meta charset="UTF-8">
+    <title>基本情報技術者試験×クイズ</title>
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="css/four-choise.css">
+    <script src="../js/navigation.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <a href="../index.html">
+                <img class="logo" src="../image/logo.png" alt="ロゴ">
+            </a>
+            <a href="../index.html">基本情報技術者試験×クイズ</a>
+            <a class="mypage" href="../mypage/index.html">
+                <img class="icon" src="../image/user.png" alt="マイページアイコン">
+            </a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">作問</a></li>
+            <li><a href="../solveQuestion/index.html">問題</a></li>
+            <li><a href="../createAccount/index.html">新規登録</a></li>
+            <li><a href="../loginAccount/index.html">ログイン</a></li>
+            <li><a href="../mypage/setting.html">設定</a></li>
+        </ul>
+    </nav>
+    <div class="frame-gray">
+        <div class="frame-white">
+            <h1>四択問題</h1>
+            <div class="container">
+                <form action="php/insertFour-choice.php" method="post">
                     <div class="mondaibun">
-                        <textarea class="question" placeholder="問題文"></textarea>
+                        <textarea class="question" placeholder="問題文" name="question"></textarea>
                     </div>
 
-                <div class="choiceQuestion">
-                    <div class="1 number">
-                        <input type="button" name="askaquestion" value="ア" class="A button">
-                    <textarea class="A answer"  placeholder="回答文"></textarea>
-                </div>
-                
-                <div class="2 number">
-                    <input type="button" name="askaquestion" value="イ" class="B button">
-                    <textarea class="B answer"  placeholder="回答文"></textarea>
-                </div>
+                    <div class="choiceQuestion">
+                        <div class="1 number">
+                            <input type="radio" name="answer" value="1" class="A button">ア
+                            <textarea class="A answer" placeholder="回答文" name="choice1"></textarea>
+                        </div>
+
+                        <div class="2 number">
+                            <input type="radio" name="answer" value="2" class="B button">イ
+                            <textarea class="B answer" placeholder="回答文" name="choice2"></textarea>
+                        </div>
 
                         <div class="3 number">
-                            <input type="button" name="askaquestion" value="ウ" class="C button">
-                            <textarea class="C answer"  placeholder="回答文"></textarea>
+                            <input type="radio" name="answer" value="3" class="C button">ウ
+                            <textarea class="C answer" placeholder="回答文" name="choice3"></textarea>
                         </div>
 
                         <div class="4 number">
-                            <input type="button" name="askaquestion" value="エ" class="D button">
-                            <textarea class="D answer"  placeholder="回答文"></textarea>
+                            <input type="radio" name="answer" value="4" class="D button">エ
+                            <textarea class="D answer" placeholder="回答文" name="choice4"></textarea>
                         </div>
-                        
+
                         <div class="create">
                             <input type="submit" value="作成">
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
