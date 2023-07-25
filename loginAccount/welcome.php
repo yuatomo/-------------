@@ -3,14 +3,14 @@ session_start();
 
 // ログインしていない場合はログインページにリダイレクト
 if (!isset($_SESSION['username'])) {
-    header("Location: login.html");
+    header("Location: login.php");
     exit;
 }
 
 // ログアウト処理
 if (isset($_POST['logout'])) {
     session_destroy();
-    header("Location: index.html");
+    header("Location: index.php");
     exit;
 }
 ?>
@@ -21,6 +21,7 @@ if (isset($_POST['logout'])) {
     <title>Welcome</title>
 </head>
 <body>
+    <?php include '../session.php'; ?>
     <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
     <form action="welcome.php" method="POST">
         <input type="submit" name="logout" value="Logout">

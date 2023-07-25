@@ -8,24 +8,25 @@
         <script src="js/navigation.js"></script>
     </head>
     <body>
+        <?php include '../session.php'; ?>
         <header>
             <div class="top">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img class="logo" src="../image/logo.png" alt="ロゴ">
                 </a>
-                <a href="../index.html">基本情報技術者試験×クイズ</a>
-                <a class="mypage" href="../mypage/index.html">
+                <a href="../index.php">基本情報技術者試験×クイズ</a>
+                <a class="mypage" href="../mypage/index.php">
                     <img class="icon" src="../image/user.png" alt="マイページアイコン">
                 </a>
             </div>
         </header>
         <nav>
             <ul>
-                <li><a href="../createQuestion/index.html">作問</a></li>
-                <li><a href="../solveQuestion/index.html">問題</a></li>
-                <li><a href="../solveQuestion/four-choice.html">四択</a></li>
-                <li><a href="../solveQuestion/description.html">記述</a></li>
-                <li><a href="../solveQuestion/grade.html">回答後成績</a></li>
+                <li><a href="../createQuestion/index.php">作問</a></li>
+                <li><a href="../solveQuestion/index.php">問題</a></li>
+                <li><a href="../solveQuestion/four-choice.php">四択</a></li>
+                <li><a href="../solveQuestion/description.php">記述</a></li>
+                <li><a href="../solveQuestion/grade.php">回答後成績</a></li>
             </ul>
         </nav>
         <div class="frame-gray">

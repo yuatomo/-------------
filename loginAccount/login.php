@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if (isset($_SESSION['username'])) {
-    // ログイン済み
-    echo "You are logged in as: " . $_SESSION['username'];
-}
+// if (isset($_SESSION['username'])) {
+//     // ログイン済み
+//     echo "You are logged in as: " . $_SESSION['username'];
+// }
 
 // データベース接続情報
 $host = "localhost";
@@ -23,13 +23,13 @@ if ($connection->connect_error) {
 }
 
 // ユーザー名とパスワードの一致を確認するクエリを作成
-$query = "SELECT * FROM user_status WHERE User_Name='$username' AND Pass_word='$password'";
+$query = "SELECT * FROM user_status WHERE username='$username' AND password='$password'";
 $result = $connection->query($query);
 
 if ($result->num_rows == 1) {
     // ログイン成功
     $_SESSION['username'] = $username;
-    header("Location: ../mypage/index.html");
+    header("Location: welcome.php");
 } else {
     // ログイン失敗
 
