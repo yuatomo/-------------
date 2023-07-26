@@ -8,7 +8,13 @@
         <script src="../js/navigation.js"></script>
     </head>
     <body>
-        <?php include '../session.php'; ?>
+        <?php
+            include '../session.php';
+            if (isset($_SESSION['username'])) {
+                // ログイン済み
+                header("Location: ../mypage/index.php");
+            }
+        ?>
         <header>
             <div class="top">
                 <a href="../index.php">

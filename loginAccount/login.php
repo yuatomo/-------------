@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-// if (isset($_SESSION['username'])) {
-//     // ログイン済み
-//     echo "You are logged in as: " . $_SESSION['username'];
-// }
-
 // データベース接続情報
 $host = "localhost";
 $dbUsername = "root";
@@ -29,7 +24,7 @@ $result = $connection->query($query);
 if ($result->num_rows == 1) {
     // ログイン成功
     $_SESSION['username'] = $username;
-    header("Location: welcome.php");
+    header("Location: ../mypage/index.php");
 } else {
     // ログイン失敗
 

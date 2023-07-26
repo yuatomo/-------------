@@ -36,7 +36,7 @@
                 <a href="gradeList.php" class="Button">成績</a>
                 <a href="growthRecord.php" class="Button">成長曲線</a>
                 <a href="managementAccount.php" class="Button">アカウント管理</a>
-                <a href="" class="Button">ログアウト</a>
+                <a href="logout.php" class="Button">ログアウト</a>
             </div>
         </div>
         </div>
