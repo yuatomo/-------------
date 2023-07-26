@@ -37,7 +37,7 @@
                     <a href="four-choice.php" class="four-choice Button">四択問題</a>
                     <a href="description.php" class="description Button">記述問題</a>
                     <hr class="line"></hr>
-                    <a href="list.html" class="list Button">作問一覧</a>
+                    <a href="list.php" class="list Button">作問一覧</a>
                 </div>
             </div>
         </div>
