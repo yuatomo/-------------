@@ -22,6 +22,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $choice_b = $row["choice2"];
         $choice_c = $row["choice3"];
         $choice_d = $row["choice4"];
+        
+        session_start();
+
+        if (isset($_POST['choice'])) {
+            if ($_POST['choice'] === 'ア') {
+                $answer = checkAnswer($_POST["question_number"], 1, $connection);
+            } elseif ($_POST['choice'] === 'イ') {
+                checkAnswer($_POST["question_number"], 2, $connection);
+            } elseif ($_POST['choice'] === 'ウ') {
+                checkAnswer($_POST["question_number"], 3, $connection);
+            } elseif ($_POST['choice'] === 'エ') {
+                checkAnswer($_POST["question_number"], 4, $connection);
+            }
+        }
+
         // 次の問題番号をhiddenフィールドとしてフォームに含める
         echo '<input type="hidden" name="question_number" value="' . $nextQuestionNumber . '">';
     } else {
@@ -48,6 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $choice_b = $row["choice2"];
         $choice_c = $row["choice3"];
         $choice_d = $row["choice4"];
+        $answer = "";
         // 次の問題番号をhiddenフィールドとしてフォームに含める
         echo '<input type="hidden" name="question_number" value="' . $nextQuestionNumber . '">';
     } else {
@@ -56,11 +72,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $choice_b = "回答がありません。";
         $choice_c = "回答がありません。";
         $choice_d = "回答がありません。";
+        $answer = "";
     }
 }
 
 // データベース接続を閉じる
 $connection->close();
+
+function checkAnswer($question_no, $choice, $connection) {
+    $sql = "SELECT * FROM question_fourchoice WHERE question_no = " . $question_no . " AND answer = " . $choice;
+    $result = $connection->query($sql);
+    // 正解した時の処理
+    if (isset($_SESSION['username'])) {
+        if ($result->num_rows > 0) {
+            $sql = "INSERT INTO user_answer VALUES (NULL, '" . $_SESSION['username'] . "', '" . $question_no ."', 
+            '" . 1 . "', '" . $choice . "', '" . date("Y-m-d") . "')";
+            $result = $connection->query($sql);
+            return "正解です！";
+        } else {
+            $sql = "INSERT INTO user_answer VALUES (NULL, '" . $_SESSION['username'] . "', '" . $question_no ."', 
+            '" . 0 . "', '" . $choice . "', '" . date("Y-m-d") . "')";
+            $result = $connection->query($sql);
+            return "不正解です";
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -100,33 +136,36 @@ $connection->close();
             <h1>四択問題</h1>
             <div class="container">
                 <div class="tes">
+                    <!--
                     <a class="interruption">中断する</a>
                     <a class="now">X問正解!!! 正答率X問回答中・・・</a>
                     <a class="skip">スキップ</a>
+                    -->
                 </div>
                 <form action="" method="post">
+                    <p><?php echo $answer; ?></p>
                     <div class="mondai">
                         <p class="question"><?php echo $question; ?></p>
                     </div>
 
                     <div class="choiceQuestion">
                         <div class="1 number">
-                            <input type="submit" name="choice_a" value="ア" class="A button">
+                            <input type="submit" name="choice" value="ア" class="A button">
                             <a class="A answer"><?php echo $choice_a; ?></a>
                         </div>
 
                         <div class="2 number">
-                            <input type="submit" name="choice_b" value="イ" class="B button">
+                            <input type="submit" name="choice" value="イ" class="B button">
                             <a class="B answer"><?php echo $choice_b; ?></a>
                         </div>
 
                         <div class="3 number">
-                            <input type="submit" name="choice_c" value="ウ" class="C button">
+                            <input type="submit" name="choice" value="ウ" class="C button">
                             <a class="C answer"><?php echo $choice_c; ?></a>
                         </div>
 
                         <div class="4 number">
-                            <input type="submit" name="choice_d" value="エ" class="D button">
+                            <input type="submit" name="choice" value="エ" class="D button">
                             <a class="D answer"><?php echo $choice_d; ?></a>
                         </div>
                         <input type="hidden" name="question_number" value="<?php echo $nextQuestionNumber; ?>">

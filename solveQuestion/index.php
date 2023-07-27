@@ -102,7 +102,32 @@
                         <label for="radio3"><input type="checkbox" id="radio3" name="questionlimit" value="questionlimit">間違えた問題</label>
                     </div>
                     <div class="start">
-                        <a href="" class="startbutton">スタート</a>
+                        <a href="#" class="startbutton" onclick="redirectToSelectedPage()">スタート</a>
+                        <script>
+                            function redirectToSelectedPage() {
+                                // ラジオボタンの値を取得
+                                const selectedValue = document.querySelector('input[name="problemselection"]:checked').value;
+
+                                // 選択された値に応じてリダイレクト先のURLを設定
+                                let redirectUrl;
+                                switch (selectedValue) {
+                                    case "four":
+                                    redirectUrl = "four-choice.php";
+                                    break;
+                                    case "writing":
+                                    redirectUrl = "description.php";
+                                    break;
+                                    default:
+                                    redirectUrl = "index.php";
+                                    break;
+                                }
+
+                                // リダイレクト
+                                if (redirectUrl) {
+                                    window.location.href = redirectUrl;
+                                }
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
