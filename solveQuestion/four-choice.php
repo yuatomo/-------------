@@ -1,6 +1,7 @@
 <?php
 require_once 'C:\xampp\htdocs\ExamQuiz\connect.php';
 
+
 // ページがPOSTリクエストされた場合
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 現在の問題番号を取得
@@ -22,19 +23,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $choice_b = $row["choice2"];
         $choice_c = $row["choice3"];
         $choice_d = $row["choice4"];
-        
+        $questionCount = $_POST["question_count"] + 1;
+        echo '<input type="hidden" name="question_count" value=' . $questionCount . '>';
+
         session_start();
 
         if (isset($_POST['choice'])) {
             if ($_POST['choice'] === 'ア') {
-                $answer = checkAnswer($_POST["question_number"], 1, $connection);
+                $is_correct = checkAnswer($_POST["question_number"], 1, $connection);
             } elseif ($_POST['choice'] === 'イ') {
-                checkAnswer($_POST["question_number"], 2, $connection);
+                $is_correct = checkAnswer($_POST["question_number"], 2, $connection);
             } elseif ($_POST['choice'] === 'ウ') {
-                checkAnswer($_POST["question_number"], 3, $connection);
+                $is_correct = checkAnswer($_POST["question_number"], 3, $connection);
             } elseif ($_POST['choice'] === 'エ') {
-                checkAnswer($_POST["question_number"], 4, $connection);
+                $is_correct = checkAnswer($_POST["question_number"], 4, $connection);
             }
+        }
+
+        if ($is_correct) {
+            $answer = "正解です！";
+            $correctAnswerCount = $_POST["correct_answer_count"] + 1;
+            echo '<input type="hidden" name="correct_answer_count" value="' . $correctAnswerCount . '">';
+        } else {
+            $answer = "不正解です";
+            $correctAnswerCount = $_POST["correct_answer_count"];
+            echo '<input type="hidden" name="correct_answer_count" value="' . $correctAnswerCount . '">';
         }
 
         // 次の問題番号をhiddenフィールドとしてフォームに含める
@@ -46,10 +59,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $choice_b = "回答がありません。";
         $choice_c = "回答がありません。";
         $choice_d = "回答がありません。";
+        $answer = "";
     }
 } else {
     // 最初のページロード時に最初の問題を表示するために最初の問題番号を1に設定
     $nextQuestionNumber = 1;
+    $answer = "";
+    $questionCount = 0;
+    $correctAnswerCount = 0;
 
     // 最初の問題を取得するSQLクエリ
     $sql = "SELECT question, choice1, choice2, choice3, choice4 FROM question_fourchoice ORDER BY question_no LIMIT 1";
@@ -63,16 +80,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $choice_b = $row["choice2"];
         $choice_c = $row["choice3"];
         $choice_d = $row["choice4"];
-        $answer = "";
         // 次の問題番号をhiddenフィールドとしてフォームに含める
         echo '<input type="hidden" name="question_number" value="' . $nextQuestionNumber . '">';
+        echo '<input type="hidden" name="question_count" value="' . $questionCount . '">';
+        echo '<input type="hidden" name="correct_answer_count" value="' . $correctAnswerCount . '">';
     } else {
         $question = "問題がありません。";
         $choice_a = "回答がありません。";
         $choice_b = "回答がありません。";
         $choice_c = "回答がありません。";
         $choice_d = "回答がありません。";
-        $answer = "";
     }
 }
 
@@ -88,12 +105,12 @@ function checkAnswer($question_no, $choice, $connection) {
             $sql = "INSERT INTO user_answer VALUES (NULL, '" . $_SESSION['username'] . "', '" . $question_no ."', 
             '" . 1 . "', '" . $choice . "', '" . date("Y-m-d") . "')";
             $result = $connection->query($sql);
-            return "正解です！";
+            return true;
         } else {
             $sql = "INSERT INTO user_answer VALUES (NULL, '" . $_SESSION['username'] . "', '" . $question_no ."', 
             '" . 0 . "', '" . $choice . "', '" . date("Y-m-d") . "')";
             $result = $connection->query($sql);
-            return "不正解です";
+            return false;
         }
     }
 }
@@ -143,7 +160,41 @@ function checkAnswer($question_no, $choice, $connection) {
                     -->
                 </div>
                 <form action="" method="post">
+                    <p>
+                    <span id="question_count"></span>
+                    問中
+                    <span id="correct_answer_count"></span>
+                    問正解！　
+                    正答率<span id="correct_answer_percentage"></span>％
+                    </p>
                     <p><?php echo $answer; ?></p>
+                    <script>
+                        // hiddenフィールドの値を取得
+                        let question_count = document.querySelector('input[name="question_count"]').value;
+
+                        // 結果を表示する要素にhiddenフィールドの値を追加
+                        let resultElement = document.getElementById('question_count');
+                        resultElement.innerText = question_count;
+
+                        // hiddenフィールドの値を取得
+                        let correct_answer_count = document.querySelector('input[name="correct_answer_count"]').value;
+
+                        // 結果を表示する要素にhiddenフィールドの値を追加
+                        let resultElement2 = document.getElementById('correct_answer_count');
+                        resultElement2.innerText = correct_answer_count;
+                        
+                        // hiddenフィールドの値を取得
+                        let resultElement3 = document.getElementById('correct_answer_percentage');
+
+                        if(parseInt(correct_answer_count) === 0) {
+                            resultElement3.innerText = 0;
+                        } else {
+                            let percentage = (parseInt(correct_answer_count) / parseInt(question_count)) * 100;
+                            let roundedPercentage = Math.floor(percentage * 10) / 10;
+
+                            resultElement3.innerText = roundedPercentage;
+                        }
+                    </script>
                     <div class="mondai">
                         <p class="question"><?php echo $question; ?></p>
                     </div>
@@ -169,6 +220,8 @@ function checkAnswer($question_no, $choice, $connection) {
                             <a class="D answer"><?php echo $choice_d; ?></a>
                         </div>
                         <input type="hidden" name="question_number" value="<?php echo $nextQuestionNumber; ?>">
+                        <input type="hidden" name="question_count" value="<?php echo $questionCount; ?>">
+                        <input type="hidden" name="correct_answer_count" value="<?php echo $correctAnswerCount; ?>">
                     </div>
                 </form>
             </div>
