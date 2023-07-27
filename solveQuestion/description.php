@@ -91,7 +91,7 @@ $connection->close();
                 </div>
                 <form action="" method="post">
                     <div class="mondaibun">
-                        <a class="Problemstatement" name="question"><?php echo $question; ?></a>
+                        <p class="Problemstatement" name="question"><?php echo $question; ?></ｐ>
                     </div>
                     <div class="kaitoubun">
                         <textarea class="Answersentence" placeholder="回答文" name="answer"></textarea>
