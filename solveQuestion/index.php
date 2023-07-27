@@ -5,7 +5,7 @@
         <title>基本情報技術者試験×クイズ</title>
         <link rel="stylesheet" href="../css/navigation.css">
         <link rel="stylesheet" href="css/index.css">
-        <script src="js/navigation.js"></script>
+        <script src="../js/navigation.js"></script>
     </head>
     <body>
         <?php include '../session.php'; ?>
@@ -90,11 +90,14 @@
                             
                             <label for="questioninput"><input type="radio" name="questionlimit" id="questioninput">出題数:</label>
                             <select name="questioninput" id="questioninput" class="textnum">
-                                <option value="1">1</option>
-                                <script src="js/index.js"></script>
+                            <?php
+                                for ($i = 1; $i <= 100; $i++) {
+                                    echo "<option value=\"$i\">$i</option>";
+                                }
+                            ?>
                             </select>
                         </div>
-                        <label for="radio2"><input type="radio" id="radio2" name="questionlimit" value="questionlimit">無制限</label>
+                        <label for="radio2"><input type="radio" id="radio2" name="questionlimit" value="questionlimit" checked>無制限</label>
                         <label for="radio4"><input type="checkbox" id="radio4" name="questionlimit" value="questionlimit">作問</label>
                         <label for="radio3"><input type="checkbox" id="radio3" name="questionlimit" value="questionlimit">間違えた問題</label>
                     </div>
