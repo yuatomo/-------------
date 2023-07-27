@@ -59,13 +59,14 @@ $connection->close();
 </head>
 
 <body>
+    <?php include '../session.php'; ?>
     <header>
         <div class="top">
-            <a href="../index.html">
+            <a href="../index.php">
                 <img class="logo" src="../image/logo.png" alt="ロゴ">
             </a>
-            <a href="../index.html">基本情報技術者試験×クイズ</a>
-            <a class="mypage" href="../mypage/index.html">
+            <a href="../index.php">基本情報技術者試験×クイズ</a>
+            <a class="mypage" href="../mypage/index.php">
                 <img class="icon" src="../image/user.png" alt="マイページアイコン">
             </a>
         </div>
