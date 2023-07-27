@@ -8,30 +8,31 @@
         <script src="js/test.js"></script>
     </head>
     <body>
+        <?php include 'session.php'; ?>
         <header>
             <div class="top">
-                <a href="index.html">
+                <a href="index.php">
                     <img class="logo" src="image/logo.png" alt="ロゴ">
                 </a>
-                <a href="index.html">基本情報技術者試験×クイズ</a>
-                <a class="mypage" href="mypage/index.html">
+                <a href="index.php">基本情報技術者試験×クイズ</a>
+                <a class="mypage" href="mypage/index.php">
                     <img class="icon" src="image/user.png" alt="マイページアイコン">
                 </a>
             </div>
         </header>
         <nav>
             <ul>
-                <li><a href="createQuestion/index.html">作問</a></li>
-                <li><a href="solveQuestion/index.html">問題</a></li>
-                <li><a href="createAccount/index.html">新規登録</a></li>
-                <li><a href="loginAccount/index.html">ログイン</a></li>
-                <li><a href="mypage/setting.html">設定</a></li>
+                <li><a href="createQuestion/index.php">作問</a></li>
+                <li><a href="solveQuestion/index.php">問題</a></li>
+                <li><a href="createAccount/index.php">新規登録</a></li>
+                <li><a href="loginAccount/index.php">ログイン</a></li>
+                <li><a href="mypage/setting.php">設定</a></li>
             </ul>
         </nav>
         <div class="frame-white">
             <h1 class="midasi">基本情報技術者試験×クイズ</h1>
             <div class="request">
-            <a class="application" href="https://cbt-s.com/examinee/examination/fe">基本情報技術者試験申し込み</a>
+            <a class="application" href="https://cbt-s.com/examinee/examination/fe">基本情報技術者試験申し込み（外部サイトへアクセスします。）</a>
             </div>
         </div>
     </body>

@@ -8,13 +8,7 @@
         <script src="../js/navigation.js"></script>
     </head>
     <body>
-        <?php
-            include '../session.php';
-            if (isset($_SESSION['username'])) {
-                // ログイン済み
-                header("Location: ../mypage/index.php");
-            }
-        ?>
+        <?php include '../session.php'; ?>
         <header>
             <div class="top">
                 <a href="../index.php">
@@ -37,23 +31,14 @@
         </nav>
         <div class="frame-gray">
             <div class="frame-white">
-                <h1>アカウントログイン</h1>
-                <div class="container">
-                    <form action="login.php" method="POST">
-                        <div class="form-group">
-                            <label for="username"><img src="../image/user2.png" class="user-icon">ユーザー名:</label>
-                            <input type="text" id="username" name="username" >
-                        </div>
-                        <div class="form-group">
-                            <label for="password"><img src="../image/key.png" class="pass-icon">パスワード:</label>
-                            <input type="password" id="password" name="password" >
-                        </div>
-                        <div class="login-button">
-                            <input type="submit" value="ログイン">
-                        </div>
-                    </form>
-                </div>
+            <h1>マイページ</h1>
+            <div class="container">
+                <a href="gradeList.php" class="Button">成績</a>
+                <a href="growthRecord.php" class="Button">成長曲線</a>
+                <a href="managementAccount.php" class="Button">アカウント管理</a>
+                <a href="logout.php" class="Button">ログアウト</a>
             </div>
+        </div>
         </div>
     </body>
 </html>
