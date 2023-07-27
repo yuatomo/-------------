@@ -22,19 +22,11 @@
         </header>
         <nav>
             <ul>
-<<<<<<< HEAD:solveQuestion/index.html
-                <li><a href="../createQuestion/index.html">作問</a></li>
-                <li><a href="../solveQuestion/index.html">問題</a></li>
-                <li><a href="../solveQuestion/four-choice.php">四択</a></li>
-                <li><a href="../solveQuestion/description.php">記述</a></li>
-                <li><a href="../solveQuestion/grade.html">回答後成績</a></li>
-=======
                 <li><a href="../createQuestion/index.php">作問</a></li>
                 <li><a href="../solveQuestion/index.php">問題</a></li>
                 <li><a href="../solveQuestion/four-choice.php">四択</a></li>
                 <li><a href="../solveQuestion/description.php">記述</a></li>
                 <li><a href="../solveQuestion/grade.php">回答後成績</a></li>
->>>>>>> 4e9c1c3181774951518208e57987b6ed40f45835:solveQuestion/index.php
             </ul>
         </nav>
         <div class="frame-gray">
