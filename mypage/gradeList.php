@@ -1,3 +1,81 @@
+<?php 
+require_once 'C:\xampp\htdocs\ExamQuiz\connect.php';
+
+session_start();
+
+// データベースから値を取得するクエリ
+$sql = "SELECT * FROM user_answer WHERE username = '" . $_SESSION['username'] . "' ORDER BY answer_no DESC LIMIT 10";
+$result = $connection->query($sql);
+
+// データを格納するためのHTML文字列
+$tableHTML = "<table border='1' style='margin: 0 auto;'>
+               <tr>
+                   <th>回答番号</th>
+                   <th>ユーザー名</th>
+                   <th>問題</th>
+                   <th>正誤</th>
+                   <th>ユーザーの回答</th>
+                   <th>回答日時</th>
+               </tr>";
+
+// データをループしてHTMLに格納する
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        if($row["question_no"] < 10000) {
+            $sql2 = "SELECT * FROM question_fourchoice WHERE question_no = " . $row["question_no"];
+            $result2 = $connection->query($sql2);
+            if ($result2->num_rows > 0) {
+                while ($row2 = $result2->fetch_assoc()) {
+                    $question = $row2["question"];
+                }
+            } else {
+                $question = "問題が見つかりませんでした。";
+            }
+        } else {
+            $sql3 = "SELECT * FROM question_description WHERE question_no = " . $row["question_no"];
+            $result3 = $connection->query($sql3);
+            if ($result3->num_rows > 0) {
+                while ($row3 = $result3->fetch_assoc()) { 
+                    $question = $row3["question"];
+                }
+            } else {
+                $question = "問題が見つかりませんでした。";
+            }
+        }
+        
+
+        $is_correct = $row["is_correct"] ? "○" : "×";
+        if($row["user_answer"] == 1) {
+            $user_answer = "ア";
+        } else if($row["user_answer"] == 2) {
+            $user_answer = "イ";
+        } else if($row["user_answer"] == 3) {
+            $user_answer = "ウ";
+        } else if($row["user_answer"] == 4) {
+            $user_answer = "エ";
+        } else {
+            $user_answer = $row["user_answer"];
+        }
+        $tableHTML .= "<tr>
+                        <td>" . $row["answer_no"] . "</td>
+                        <td>" . $row["username"] . "</td>
+                        <td>" . $question . "</td>
+                        <td>" . $is_correct . "</td>
+                        <td>" . $user_answer . "</td>
+                        <td>" . $row["answer_date"] . "</td>
+                      </tr>";
+    }
+} else {
+    $tableHTML .= "<tr><td colspan='3'>データがありません</td></tr>";
+}
+
+// テーブルの閉じタグを追加
+$tableHTML .= "</table>";
+
+// データベース接続を閉じる
+$connection->close();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,7 +109,11 @@
         </nav>
         <div class="frame-gray">
             <div class="frame-white">
-                <h1>成績</h1>
+                <h1>成績</h1><br>
+                <div class="center">
+                    <?php echo $tableHTML; ?>
+                </div>
+                <!--
                 <div class="container">
                 <div class="selection">
                 <div class="cp_ipselect cp_sl04">
@@ -53,6 +135,7 @@
             </div>
             </div>
             </div>
+            -->
         </div>
     </body>
 </html>
