@@ -9,6 +9,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 次の問題番号を計算
     $nextQuestionNumber = $currentQuestionNumber + 1;
 
+    $_POST["question_count"]++;
+    $questionCount = $_POST["question_count"];
+    echo '<input type="hidden" name="question_count" value=' . $questionCount . '>';
+
+    session_start();
+
+    if (isset($_POST['choice'])) {
+        if ($_POST['choice'] === 'ア') {
+            $is_correct = checkAnswer($_POST["question_number"], 1, $connection);
+        } elseif ($_POST['choice'] === 'イ') {
+            $is_correct = checkAnswer($_POST["question_number"], 2, $connection);
+        } elseif ($_POST['choice'] === 'ウ') {
+            $is_correct = checkAnswer($_POST["question_number"], 3, $connection);
+        } elseif ($_POST['choice'] === 'エ') {
+            $is_correct = checkAnswer($_POST["question_number"], 4, $connection);
+        }
+    }
+
+    if ($is_correct) {
+        $answer = "正解です！";
+        $_POST["correct_answer_count"]++;
+        $correctAnswerCount = $_POST["correct_answer_count"];
+        echo '<input type="hidden" name="correct_answer_count" value="' . $correctAnswerCount . '">';
+    } else {
+        $answer = "不正解です";
+        $correctAnswerCount = $_POST["correct_answer_count"];
+        echo '<input type="hidden" name="correct_answer_count" value="' . $correctAnswerCount . '">';
+    }
+
     // 問題を取得するSQLクエリ
     $sql = "SELECT question, choice1, choice2, choice3, choice4 FROM question_fourchoice ORDER BY question_no LIMIT 1 OFFSET " . ($nextQuestionNumber - 1);
 
@@ -23,43 +52,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $choice_b = $row["choice2"];
         $choice_c = $row["choice3"];
         $choice_d = $row["choice4"];
-        $questionCount = $_POST["question_count"] + 1;
-        echo '<input type="hidden" name="question_count" value=' . $questionCount . '>';
-
-        session_start();
-
-        if (isset($_POST['choice'])) {
-            if ($_POST['choice'] === 'ア') {
-                $is_correct = checkAnswer($_POST["question_number"], 1, $connection);
-            } elseif ($_POST['choice'] === 'イ') {
-                $is_correct = checkAnswer($_POST["question_number"], 2, $connection);
-            } elseif ($_POST['choice'] === 'ウ') {
-                $is_correct = checkAnswer($_POST["question_number"], 3, $connection);
-            } elseif ($_POST['choice'] === 'エ') {
-                $is_correct = checkAnswer($_POST["question_number"], 4, $connection);
-            }
-        }
-
-        if ($is_correct) {
-            $answer = "正解です！";
-            $correctAnswerCount = $_POST["correct_answer_count"] + 1;
-            echo '<input type="hidden" name="correct_answer_count" value="' . $correctAnswerCount . '">';
-        } else {
-            $answer = "不正解です";
-            $correctAnswerCount = $_POST["correct_answer_count"];
-            echo '<input type="hidden" name="correct_answer_count" value="' . $correctAnswerCount . '">';
-        }
 
         // 次の問題番号をhiddenフィールドとしてフォームに含める
         echo '<input type="hidden" name="question_number" value="' . $nextQuestionNumber . '">';
     } else {
-        // 問題がない場合はメッセージを表示
-        $question = "問題がありません。";
-        $choice_a = "回答がありません。";
-        $choice_b = "回答がありません。";
-        $choice_c = "回答がありません。";
-        $choice_d = "回答がありません。";
-        $answer = "";
+        $_SESSION['question_count'] = $_POST["question_count"];
+        $_SESSION['correct_answer_count'] = $_POST["correct_answer_count"];
+        header("Location: grade.php");
+        exit();
     }
 } else {
     // 最初のページロード時に最初の問題を表示するために最初の問題番号を1に設定

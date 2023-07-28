@@ -37,7 +37,7 @@
                 <a class="label">正答率</a>
                 </div>
                 <div class="Correctanswerrate">
-                <a class="aws"><p class="te">/X問</p></a>
+                <p class="aws"><?php echo $_SESSION['correct_answer_count']; ?>/<?php echo $_SESSION['question_count']; ?>問</p>
                 </div>
                 <div class="Genreselection">
                 <a href="index.php" class="Genreselectionbutton">ジャンル選択へ</a>
