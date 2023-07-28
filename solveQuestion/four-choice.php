@@ -100,18 +100,21 @@ function checkAnswer($question_no, $choice, $connection) {
     $sql = "SELECT * FROM question_fourchoice WHERE question_no = " . $question_no . " AND answer = " . $choice;
     $result = $connection->query($sql);
     // 正解した時の処理
-    if (isset($_SESSION['username'])) {
-        if ($result->num_rows > 0) {
+    
+    if ($result->num_rows > 0) {
+        if (isset($_SESSION['username'])) {
             $sql = "INSERT INTO user_answer VALUES (NULL, '" . $_SESSION['username'] . "', '" . $question_no ."', 
             '" . 1 . "', '" . $choice . "', '" . date("Y-m-d") . "')";
             $result = $connection->query($sql);
-            return true;
-        } else {
+        }
+        return true;
+    } else {
+        if (isset($_SESSION['username'])) {
             $sql = "INSERT INTO user_answer VALUES (NULL, '" . $_SESSION['username'] . "', '" . $question_no ."', 
             '" . 0 . "', '" . $choice . "', '" . date("Y-m-d") . "')";
             $result = $connection->query($sql);
-            return false;
         }
+        return false;
     }
 }
 ?>
