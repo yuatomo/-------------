@@ -4,7 +4,7 @@ require_once 'C:\xampp\htdocs\ExamQuiz\connect.php';
 session_start();
 
 // データベースから値を取得するクエリ
-$sql = "SELECT * FROM user_answer WHERE username = '" . $_SESSION['username'] . "' ORDER BY answer_no DESC LIMIT 10";
+$sql = "SELECT * FROM user_answer WHERE username = '" . $_SESSION['username'] . "' ORDER BY answer_no DESC LIMIT 5";
 $result = $connection->query($sql);
 
 // データを格納するためのHTML文字列
