@@ -24,9 +24,9 @@
             <ul>
                 <li><a href="../createQuestion/index.php">作問</a></li>
                 <li><a href="../solveQuestion/index.php">問題</a></li>
-                <li><a href="../solveQuestion/four-choice.php">四択</a></li>
-                <li><a href="../solveQuestion/description.php">記述</a></li>
-                <li><a href="../solveQuestion/grade.php">回答後成績</a></li>
+                <li><a href="../createAccount/index.php">新規登録</a></li>
+                <li><a href="../loginAccount/index.php">ログイン</a></li>
+                <li><a href="../mypage/setting.php">設定</a></li>
             </ul>
         </nav>
         <div class="frame-gray">

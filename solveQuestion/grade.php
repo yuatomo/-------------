@@ -34,7 +34,7 @@
                 <h1>回答後成績</h1>
                 <div class="container">
                 <div class="seitou">
-                <a class="label">正答率</a>
+                <a class="label">正答率　<?php echo floor(($_SESSION['correct_answer_count'] / $_SESSION['question_count'] * 100) * 10) / 10 ?>％</a>
                 </div>
                 <div class="Correctanswerrate">
                 <p class="aws"><?php echo $_SESSION['correct_answer_count']; ?>/<?php echo $_SESSION['question_count']; ?>問</p>

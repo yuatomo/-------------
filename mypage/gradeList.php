@@ -10,12 +10,12 @@ $result = $connection->query($sql);
 // データを格納するためのHTML文字列
 $tableHTML = "<table border='1' style='margin: 0 auto;'>
                <tr>
-                   <th>回答番号</th>
-                   <th>ユーザー名</th>
-                   <th>問題</th>
-                   <th>正誤</th>
-                   <th>ユーザーの回答</th>
-                   <th>回答日時</th>
+                   <th width='100px'>回答番号</th>
+                   <th width='120px'>ユーザー名</th>
+                   <th width='300px'>問題</th>
+                   <th width='50px'>正誤</th>
+                   <th width='100px'>ユーザーの回答</th>
+                   <th width='150px'>回答日時</th>
                </tr>";
 
 // データをループしてHTMLに格納する
@@ -66,7 +66,7 @@ if ($result->num_rows > 0) {
                       </tr>";
     }
 } else {
-    $tableHTML .= "<tr><td colspan='3'>データがありません</td></tr>";
+    $tableHTML .= "<tr><td colspan='6'>データがありません</td></tr>";
 }
 
 // テーブルの閉じタグを追加
