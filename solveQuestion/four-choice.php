@@ -198,8 +198,8 @@ function checkAnswer($question_no, $choice, $connection) {
                             resultElement3.innerText = roundedPercentage;
                         }
                     </script>
-                    <div class="mondai">
-                        <p class="question"><?php echo $question; ?></p>
+                    <div class="mondaibun">
+                        <p class="Problemstatement"><?php echo $question; ?></p>
                     </div>
 
                     <div class="choiceQuestion">
